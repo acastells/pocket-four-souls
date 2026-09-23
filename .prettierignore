@@ -1,0 +1,8 @@
+node_modules
+dist
+data
+public
+package-lock.json
+lib/*.json
+android/build
+android/web

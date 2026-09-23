@@ -1,0 +1,3903 @@
+{
+  "b2-blue_baby": {
+    "stats": {
+      "HP": "2",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Tap Effect] Play an additional loot card this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Character Card"
+  },
+  "b2-judas": {
+    "stats": {
+      "HP": "2",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Tap Effect] Play an additional loot card this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Character Card"
+  },
+  "b2-maggy": {
+    "stats": {
+      "HP": "2",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Tap Effect] Play an additional loot card this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Character Card"
+  },
+  "b2-isaac": {
+    "stats": {
+      "HP": "2",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Tap Effect] Play an additional loot card this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Character Card"
+  },
+  "b2-lazarus": {
+    "stats": {
+      "HP": "2",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Tap Effect] Play an additional loot card this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Character Card"
+  },
+  "b2-cain": {
+    "stats": {
+      "HP": "2",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Tap Effect] Play an additional loot card this turn.",
+      "If you control this as the game starts, you go first."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Character Card"
+  },
+  "b2-the_forgotten": {
+    "stats": {
+      "HP": "2",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Tap Effect] Play an additional loot card this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Character Card"
+  },
+  "b2-samson": {
+    "stats": {
+      "HP": "2",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Tap Effect] Play an additional loot card this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Character Card"
+  },
+  "b2-eve": {
+    "stats": {
+      "HP": "2",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Tap Effect] Play an additional loot card this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Character Card"
+  },
+  "b2-lilith": {
+    "stats": {
+      "HP": "2",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Tap Effect] Play an additional loot card this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Character Card"
+  },
+  "b2-incubus": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Choose one- Look at a player's hand. You may swap a card from your hand with one of theirs. Loot 1, then put a card from your hand on top of the loot deck."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Eternal Treasure Card"
+  },
+  "b2-the_curse": {
+    "stats": {},
+    "effects": [
+      "At the start of your turn, put the top card of a deck into discard.",
+      "[Tap Effect] Put the top card of any discard on top of its deck."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Eternal Treasure Card"
+  },
+  "b2-yum_heart": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Choose a player or monster. Prevent the next instance of damage they would take this turn.",
+      "At the end of your turn, recharge this."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Eternal Treasure Card"
+  },
+  "b2-the_d6": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Choose a dice roll. Its controller rerolls it.",
+      "At the end of your turn, recharge this."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Eternal Treasure Card"
+  },
+  "b2-eden": {
+    "stats": {
+      "HP": "2",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Tap Effect] Play an additional loot card this turn.",
+      "When you start the game, look at the top 3 cards of the treasure deck and choose one. It becomes your starting item and gains eternal. Put the rest on the bottom of the treasure deck."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Character Card"
+  },
+  "b2-lazarus_rags": {
+    "stats": {},
+    "effects": [
+      "Each time you die, after paying penalties, gain +1 treasure."
+    ],
+    "rewards": {
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Eternal Treasure Card"
+  },
+  "b2-book_of_belial": {
+    "stats": {},
+    "effects": [
+      "Add or subtract 1 from a roll.",
+      "At the end of your turn, recharge this."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Eternal Treasure Card"
+  },
+  "b2-blood_lust": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Choose a player or monster. They gain +1 [ATK] till end of turn.",
+      "At the end of your turn, recharge this."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Eternal Treasure Card"
+  },
+  "b2-sleight_of_hand": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Look at the top 5 cards of a deck. Put them back in any order."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Eternal Treasure Card"
+  },
+  "b2-forever_alone": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Choose one- Steal 1¢ from another player. Look at the top card of a deck. Discard a loot card, then loot 1.",
+      "Each time you take damage, recharge this."
+    ],
+    "rewards": {
+      "Coin": 1,
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Eternal Treasure Card"
+  },
+  "b2-cheese_grater": {
+    "stats": {},
+    "effects": [
+      "Each time a player rolls a ❻, reveal the top card of any deck. Put it back or put it into discard."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-bobs_brain": {
+    "stats": {},
+    "effects": [
+      "Each time you declare an attack, roll-",
+      "1-2: Deal 1 damage to a monster.",
+      "3-4: Deal 1 damage to a player.",
+      "5-6: Take 1 damage.",
+      "",
+      ""
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-breakfast": {
+    "stats": {},
+    "effects": [
+      "[HP] \"I gave you milk to drink, not solid food; for you were not yet able to receive it.\" Corinthians 3:2"
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-belly_button": {
+    "stats": {},
+    "effects": [
+      "You may play an additional loot card on your turn.",
+      "Each time you take damage, you may recharge your character."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-brimstone": {
+    "stats": {},
+    "effects": [
+      "[ATK] Each time you deal combat damage to a monster, deal 1 damage to another player."
+    ],
+    "rewards": {},
+    "threePlus": true,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-champion_belt": {
+    "stats": {},
+    "effects": [
+      "You have +1 [ATK] for your first attack roll each turn.",
+      "You may attack an additional time on your turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-the_bone": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Put a counter on this.",
+      "[Paid Effect] Remove 1 counter from this: Add +1 to a dice roll.",
+      "[Paid Effect] Remove 2 counters from this: Deal 1 damage to a monster or player.",
+      "[Paid Effect] Remove 5 counters from this: This becomes a soul and loses all abilities.",
+      "",
+      ""
+    ],
+    "rewards": {
+      "Soul": 1
+    },
+    "threePlus": false,
+    "subtype": "Eternal Treasure Card"
+  },
+  "b2-charged_baby": {
+    "stats": {},
+    "effects": [
+      "Each time a player rolls a ❷, you may recharge an item."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-cambion_conception": {
+    "stats": {},
+    "effects": [
+      "Each time you take damage, put counters on this equal to the amount of damage taken. Then, if this has 6+ counters, remove 6 counters from this and gain +1 treasure."
+    ],
+    "rewards": {
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-bum_bo": {
+    "stats": {},
+    "effects": [
+      "If you would gain any amount of ¢, this levels up by that much instead.",
+      "[LV1 Effect] You have +2 to your first attack roll each turn.",
+      "[LV10 Effect] You have +1 [ATK] .",
+      "[LV25 Effect] You may attack any number of times on your turn.",
+      "",
+      ""
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-dry_baby": {
+    "stats": {},
+    "effects": [
+      "Damage you would take is reduced to 1."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-dark_bum": {
+    "stats": {},
+    "effects": [
+      "At the start of your turn, roll-",
+      "1-2: Gain 3¢.",
+      "3-4: Loot 1.",
+      "5-6: Take 1 damage.",
+      "",
+      ""
+    ],
+    "rewards": {
+      "Coin": 3,
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-dead_bird": {
+    "stats": {},
+    "effects": [
+      "Each time a player rolls a ❸, you may look at their hand and steal a loot card from them."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-edens_blessing": {
+    "stats": {},
+    "effects": [
+      "At the end of your turn, if you have 0¢, gain 6¢."
+    ],
+    "rewards": {
+      "Coin": 6
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-dads_lost_coin": {
+    "stats": {},
+    "effects": [
+      "Each time a player would roll a ❶, you may force that player to reroll it."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-curse_of_the_tower": {
+    "stats": {},
+    "effects": [
+      "Each time you take damage, roll-",
+      "1-3: Each other player takes 1 damage.",
+      "4-6: Deal 1 damage to a monster."
+    ],
+    "rewards": {},
+    "threePlus": true,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-empty_vessel": {
+    "stats": {},
+    "effects": [
+      "When you have 0 loot cards in your hand, you have +1 [ATK] .",
+      "While you have 0¢, you have +1 to your attack rolls."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-dinner": {
+    "stats": {},
+    "effects": [
+      "[HP] \"Do not give what is holy to dogs, and do not throw your pearls before swine.\" Matthew 7:6"
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-fanny_pack": {
+    "stats": {},
+    "effects": [
+      "Each time you take damage, loot 1."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-eye_of_greed": {
+    "stats": {},
+    "effects": [
+      "Each time a player rolls a ❺, gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-goat_head": {
+    "stats": {},
+    "effects": [
+      "At the end of your turn, you may discard any number of loot cards, then loot equal to the number of cards discarded in this way."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-ipecac": {
+    "stats": {},
+    "effects": [
+      "[ATK] Each time you roll an attack roll of 6, deal 1 damage to each other player."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-finger": {
+    "stats": {},
+    "effects": [
+      "Each time a player rolls a ❷, you may swap a non-eternal item you control with a non-eternal item they control."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-moms_box": {
+    "stats": {},
+    "effects": [
+      "Each time a player rolls a ❹, you may loot 1, then discard a loot card."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-moms_purse": {
+    "stats": {},
+    "effects": [
+      "Loot +1 during your loot step."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-moms_coin_purse": {
+    "stats": {},
+    "effects": [
+      "Loot +1 during your loot step."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-greeds_gullet": {
+    "stats": {},
+    "effects": [
+      "Each time you die, before paying penalties, gain 8¢."
+    ],
+    "rewards": {
+      "Coin": 8
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-moms_razor": {
+    "stats": {},
+    "effects": [
+      "Each time a player rolls a ❻, you may deal 1 damage to them."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-guppys_collar": {
+    "stats": {},
+    "effects": [
+      "Each time you would die, roll- 1-3: Prevent death. If it's your turn, cancel everything that hasn't resolved and end your turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-meat": {
+    "stats": {},
+    "effects": [
+      "You have +1 to attack rolls."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-sacred_heart": {
+    "stats": {},
+    "effects": [
+      "When you would roll a 1, you may change the result to a 6."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-suicide_king": {
+    "stats": {},
+    "effects": [
+      "Each time you die, before paying penalties, loot 3."
+    ],
+    "rewards": {
+      "Loot": 3
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-shadow": {
+    "stats": {},
+    "effects": [
+      "If another player would pay the death penalty, you choose what item they would destroy and you gain any loot cards and ¢ they would lose."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-spider_mod": {
+    "stats": {},
+    "effects": [
+      "Each time a player rolls a ❺, you may put a monster not being attacked into discard and replace it with the top card of the monster deck."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-restock": {
+    "stats": {},
+    "effects": [
+      "At the start of your turn, you may put any number of shop items into discard."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-shiny_rock": {
+    "stats": {},
+    "effects": [
+      "Each time you activate an item, gain 1¢."
+    ],
+    "rewards": {
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-polydactyly": {
+    "stats": {},
+    "effects": [
+      "You may play an additional loot card on your turn.",
+      "You have +1 [ATK] for your first attack roll each turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-monstros_tooth": {
+    "stats": {},
+    "effects": [
+      "At the start of your turn, choose a player at random. That player destroys an item they control."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-steamy_sale": {
+    "stats": {},
+    "effects": [
+      "Shop items you purchase cost 5¢ less."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-starter_deck": {
+    "stats": {},
+    "effects": [
+      "At the end of your turn, if you have 8 or more loot cards in your hand, loot 2."
+    ],
+    "rewards": {
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-the_blue_map": {
+    "stats": {},
+    "effects": [
+      "At the end of your turn, look at the top 4 cards of the treasure deck. You may put them back in any order."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-the_dead_cat": {
+    "stats": {},
+    "effects": [
+      "This item starts with 9 counters on it.",
+      "If you would take damage while this has counters on it, remove that many counters and prevent that much damage."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-synthoil": {
+    "stats": {},
+    "effects": [
+      "You have +1 to attack rolls."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-tarot_cloth": {
+    "stats": {},
+    "effects": [
+      "Each time a player rolls a ❹, they must give you a loot card."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-the_map": {
+    "stats": {},
+    "effects": [
+      "At the end of your turn, look at the top 4 cards of the monster deck. Put them back in any order."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-the_chest": {
+    "stats": {},
+    "effects": [
+      "if this would be destroyed, it becomes a soul instead."
+    ],
+    "rewards": {
+      "Soul": 1
+    },
+    "threePlus": false,
+    "subtype": "Soul Treasure Card"
+  },
+  "b2-the_d10": {
+    "stats": {},
+    "effects": [
+      "Each time a player rolls a ❸, you may put the top card of the Monster Deck in a monster slot not being attacked."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-the_midas_touch": {
+    "stats": {},
+    "effects": [
+      "Each time a monster dies, gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-the_habit": {
+    "stats": {},
+    "effects": [
+      "The first time you take damage each turn, you may recharge an item."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-the_compass": {
+    "stats": {},
+    "effects": [
+      "At the end of your turn, look at the top 4 cards of the loot deck. Put them back in any order."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-the_polaroid": {
+    "stats": {},
+    "effects": [
+      "At the end of your turn, if you have 0 loot cards in your hand, loot 2."
+    ],
+    "rewards": {
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-chaos": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Each player gives their hand to the player to their left."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-blank_card": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] The next time you play a non-trinket, non-ambush loot card this turn, copy it."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-bum_friend": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Loot 1, then put a loot card from your hand on top of the loot deck."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-book_of_sin": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Roll- 1-2: Gain 1¢. 3-4: Loot 1. 5-6: Gain +1 [HP] till end of turn."
+    ],
+    "rewards": {
+      "Coin": 1,
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-theres_options": {
+    "stats": {},
+    "effects": [
+      "You may look at the top card of the treasure deck at any time on your turn.",
+      "You may purchase an additional time on your turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-trinity_shield": {
+    "stats": {},
+    "effects": [
+      "Other players can't play loot cards or activate items on your turn."
+    ],
+    "rewards": {},
+    "threePlus": true,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-box": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Destroy this. If you do, you may play any number of additional loot cards till end of turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "One-Use Treasure Card"
+  },
+  "b2-the_relic": {
+    "stats": {},
+    "effects": [
+      "Each time a player rolls a ❶, loot 1."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-boomerang": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Choose another player. Steal a loot card from them at random."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-compost": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] The next time a player would loot, they loot from the top of the loot discard instead."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-chaos_card": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Destroy this. If you do, choose one- Kill a player or monster. Destroy an item or soul."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "One-Use Treasure Card"
+  },
+  "b2-decoy": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Swap this with a non-eternal item another player controls."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-crystal_ball": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Before a dice is rolled, choose a number. If the next roll is that number, loot 3."
+    ],
+    "rewards": {
+      "Loot": 3
+    },
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-glass_cannon": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Destroy another item, then roll- 1-5: Destroy this and loot 2. 6: Recharge this."
+    ],
+    "rewards": {
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-guppys_head": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Choose a player. That player gives you a loot card."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-guppys_paw": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Pay 1 [HP] . If you do, choose a player. Prevent the next instance of up to 2 damage they would take this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-diplopia": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Choose a non-eternal passive item. This becomes a copy of that item till end of turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-godhead": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Change the result of a dice roll to a 1 or 6."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-flush": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Choose one- Put each monster not being attacked on the bottom of the monster deck. Put each shop item on the bottom of the treasure deck."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-mystery_sack": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Roll- 1-2: Loot 1. 3-4: Gain 4¢."
+    ],
+    "rewards": {
+      "Loot": 1,
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-mr_boom": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Deal 1 damage to a monster."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-mini_mush": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Subtract up to 2 from a roll."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-lucky_foot": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Add up to 2 to a non-attack roll."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-jawbone": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Steal 3¢ from a player."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-moms_bra": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Choose a monster or player. The next instance of damage they take this turn is reduced to 1."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-modeling_clay": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Choose a non-eternal item. This becomes a copy of that item.",
+      "(This change is indefinite.)"
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-moms_shovel": {
+    "stats": {},
+    "effects": [
+      "This enters play deactivated.",
+      "[Tap Effect] Destroy this. If you do, steal a soul from another player."
+    ],
+    "rewards": {
+      "Soul": 1
+    },
+    "threePlus": false,
+    "subtype": "One-Use Treasure Card"
+  },
+  "b2-monster_manual": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Choose a monster. The active player must attack that monster this turn if able."
+    ],
+    "rewards": {},
+    "threePlus": true,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-host_hat": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Prevent the next 1 damage you would take this turn. When you prevent damage this way, deal 1 damage to another player."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-remote_detonator": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Each player votes on an item in play. Destroy the item with the most votes. If there is a tie, nothing happens."
+    ],
+    "rewards": {},
+    "threePlus": true,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-sack_of_pennies": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Gain 1¢.",
+      "Each time a player rolls a ❶, you may recharge this."
+    ],
+    "rewards": {
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-no": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Cancel the ↷ or $ ability of an item."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-razor_blade": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Deal 1 damage to a player."
+    ],
+    "rewards": {},
+    "threePlus": true,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-pandoras_box": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Destroy this. If you do, roll- 1: Gain 1¢. 2: Gain 6¢. 3: Kill a monster. 4: Loot 3. 5: Gain 9¢. 6: This becomes a soul. Gain it."
+    ],
+    "rewards": {
+      "Coin": 9,
+      "Loot": 3,
+      "Soul": 1
+    },
+    "threePlus": false,
+    "subtype": "Soul Treasure Card"
+  },
+  "b2-spoon_bender": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Add 1 to a roll."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-placebo": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] This copies a ↷ ability of a non-eternal item."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-potato_peeler": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Put the top card of each deck into discard."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-sack_head": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Look at the top card of a deck. You may put that card on the bottom of that deck."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-tech_x": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Put a counter on this.",
+      "[Paid Effect] Remove 3 counters from this: Kill a player or monster."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-the_d20": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Reroll an item.",
+      "(Destroy that item and replace it with the top card of the treasure deck.)"
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-battery_bum": {
+    "stats": {},
+    "effects": [
+      "[Paid Effect] Pay 4¢: Recharge an item."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Paid Treasure Card"
+  },
+  "b2-the_battery": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Recharge another item."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-two_of_clubs": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Choose a player. Till end of turn, if they would loot any number of loot cards, they loot double that number instead."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-donation_machine": {
+    "stats": {},
+    "effects": [
+      "[Paid Effect] Give another non-eternal item you control to another player: Gain 8¢."
+    ],
+    "rewards": {
+      "Coin": 8
+    },
+    "threePlus": false,
+    "subtype": "Paid Treasure Card"
+  },
+  "b2-the_d4": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Destroy this. If you do, choose a player. They reroll each item they control."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "One-Use Treasure Card"
+  },
+  "b2-golden_razor_blade": {
+    "stats": {},
+    "effects": [
+      "[Paid Effect] Pay 5¢: Deal 1 damage to a monster or player."
+    ],
+    "rewards": {},
+    "threePlus": true,
+    "subtype": "Paid Treasure Card"
+  },
+  "b2-the_shovel": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Put a non-event monster card in discard on top of the monster deck."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-contract_from_below": {
+    "stats": {},
+    "effects": [
+      "[Paid Effect] Destroy 2 items you control: steal a non-eternal item from a player."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Paid Treasure Card"
+  },
+  "b2-the_d100": {
+    "stats": {},
+    "effects": [
+      "[Tap Effect] Roll- 1: Loot 1. 2: Loot 2. 3: Gain 3¢. 4: Gain 4¢. 5: Gain +1 [HP] till end of turn. 6: Gain +1 [ATK] till end of turn."
+    ],
+    "rewards": {
+      "Loot": 2,
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "Active Treasure Card"
+  },
+  "b2-pay_to_play": {
+    "stats": {},
+    "effects": [
+      "[Paid Effect] Pay 10¢: Steal a non-eternal item a player controls."
+    ],
+    "rewards": {
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Paid Treasure Card"
+  },
+  "b2-smelter": {
+    "stats": {},
+    "effects": [
+      "[Paid Effect] Discard a loot card: Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Paid Treasure Card"
+  },
+  "b2-a_penny_4": {
+    "stats": {},
+    "effects": [
+      "Gain 1¢."
+    ],
+    "rewards": {
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "1 Cent Card"
+  },
+  "b2-portable_slot_machine": {
+    "stats": {},
+    "effects": [
+      "[Paid Effect] Pay 3¢: Roll- 1-2: Loot 1. 3-4: Gain 4¢."
+    ],
+    "rewards": {
+      "Loot": 1,
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "Paid Treasure Card"
+  },
+  "b2-a_penny_2": {
+    "stats": {},
+    "effects": [
+      "Gain 1¢."
+    ],
+    "rewards": {
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "1 Cent Card"
+  },
+  "b2-a_penny": {
+    "stats": {},
+    "effects": [
+      "Gain 1¢."
+    ],
+    "rewards": {
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "1 Cent Card"
+  },
+  "b2-daddy_haunt": {
+    "stats": {},
+    "effects": [
+      "[Curse Effect] If you would take any amount of damage, take that much damage +1 instead.",
+      "When you die, before paying penalties, give this to another player."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-baby_haunt": {
+    "stats": {},
+    "effects": [
+      "[Curse Effect] Monsters have +1 [DC] on your turn.",
+      "When you die, before paying penalties, give this to another player."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Passive Treasure Card"
+  },
+  "b2-the_poop": {
+    "stats": {},
+    "effects": [
+      "Each time you take damage, put a counter on this.",
+      "[Paid Effect] Remove a counter from this: Prevent the next 1 damage you would take this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Paid Treasure Card"
+  },
+  "b2-a_penny_3": {
+    "stats": {},
+    "effects": [
+      "Gain 1¢."
+    ],
+    "rewards": {
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "1 Cent Card"
+  },
+  "b2-a_penny_6": {
+    "stats": {},
+    "effects": [
+      "Gain 1¢."
+    ],
+    "rewards": {
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "1 Cent Card"
+  },
+  "b2-two_cents-11": {
+    "stats": {},
+    "effects": [
+      "Gain 2¢."
+    ],
+    "rewards": {
+      "Coin": 2
+    },
+    "threePlus": false,
+    "subtype": "2 Cent Card"
+  },
+  "b2-two_cents-12": {
+    "stats": {},
+    "effects": [
+      "Gain 2¢."
+    ],
+    "rewards": {
+      "Coin": 2
+    },
+    "threePlus": false,
+    "subtype": "2 Cent Card"
+  },
+  "b2-two_cents-6": {
+    "stats": {},
+    "effects": [
+      "Gain 2¢."
+    ],
+    "rewards": {
+      "Coin": 2
+    },
+    "threePlus": false,
+    "subtype": "2 Cent Card"
+  },
+  "b2-a_penny_5": {
+    "stats": {},
+    "effects": [
+      "Gain 1¢."
+    ],
+    "rewards": {
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "1 Cent Card"
+  },
+  "b2-two_cents-10": {
+    "stats": {},
+    "effects": [
+      "Gain 2¢."
+    ],
+    "rewards": {
+      "Coin": 2
+    },
+    "threePlus": false,
+    "subtype": "2 Cent Card"
+  },
+  "b2-two_cents-4": {
+    "stats": {},
+    "effects": [
+      "Gain 2¢."
+    ],
+    "rewards": {
+      "Coin": 2
+    },
+    "threePlus": false,
+    "subtype": "2 Cent Card"
+  },
+  "b2-two_cents-2": {
+    "stats": {},
+    "effects": [
+      "Gain 2¢."
+    ],
+    "rewards": {
+      "Coin": 2
+    },
+    "threePlus": false,
+    "subtype": "2 Cent Card"
+  },
+  "b2-two_cents-5": {
+    "stats": {},
+    "effects": [
+      "Gain 2¢."
+    ],
+    "rewards": {
+      "Coin": 2
+    },
+    "threePlus": false,
+    "subtype": "2 Cent Card"
+  },
+  "b2-two_cents-3": {
+    "stats": {},
+    "effects": [
+      "Gain 2¢."
+    ],
+    "rewards": {
+      "Coin": 2
+    },
+    "threePlus": false,
+    "subtype": "2 Cent Card"
+  },
+  "b2-three_cents-10": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-three_cents-12": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-two_cents-7": {
+    "stats": {},
+    "effects": [
+      "Gain 2¢."
+    ],
+    "rewards": {
+      "Coin": 2
+    },
+    "threePlus": false,
+    "subtype": "2 Cent Card"
+  },
+  "b2-three_cents-14": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-two_cents-8": {
+    "stats": {},
+    "effects": [
+      "Gain 2¢."
+    ],
+    "rewards": {
+      "Coin": 2
+    },
+    "threePlus": false,
+    "subtype": "2 Cent Card"
+  },
+  "b2-two_cents-9": {
+    "stats": {},
+    "effects": [
+      "Gain 2¢."
+    ],
+    "rewards": {
+      "Coin": 2
+    },
+    "threePlus": false,
+    "subtype": "2 Cent Card"
+  },
+  "b2-three_cents-11": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-two_cents": {
+    "stats": {},
+    "effects": [
+      "Gain 2¢."
+    ],
+    "rewards": {
+      "Coin": 2
+    },
+    "threePlus": false,
+    "subtype": "2 Cent Card"
+  },
+  "b2-three_cents-15": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-three_cents-13": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-three_cents": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-three_cents-4": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-three_cents-2": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-three_cents-8": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-four_cents-2": {
+    "stats": {},
+    "effects": [
+      "Gain 4¢."
+    ],
+    "rewards": {
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "4 Cent Card"
+  },
+  "b2-three_cents-7": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-three_cents-5": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-three_cents-9": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-three_cents-6": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-three_cents-3": {
+    "stats": {},
+    "effects": [
+      "Gain 3¢."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "3 Cent Card"
+  },
+  "b2-four_cents-7": {
+    "stats": {},
+    "effects": [
+      "Gain 4¢."
+    ],
+    "rewards": {
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "4 Cent Card"
+  },
+  "b2-four_cents-3": {
+    "stats": {},
+    "effects": [
+      "Gain 4¢."
+    ],
+    "rewards": {
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "4 Cent Card"
+  },
+  "b2-four_cents": {
+    "stats": {},
+    "effects": [
+      "Gain 4¢."
+    ],
+    "rewards": {
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "4 Cent Card"
+  },
+  "b2-four_cents-5": {
+    "stats": {},
+    "effects": [
+      "Gain 4¢."
+    ],
+    "rewards": {
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "4 Cent Card"
+  },
+  "b2-four_cents-9": {
+    "stats": {},
+    "effects": [
+      "Gain 4¢."
+    ],
+    "rewards": {
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "4 Cent Card"
+  },
+  "b2-a_nickel-2": {
+    "stats": {},
+    "effects": [
+      "Gain 5¢"
+    ],
+    "rewards": {
+      "Coin": 5
+    },
+    "threePlus": false,
+    "subtype": "Nickel Card"
+  },
+  "b2-a_nickel-3": {
+    "stats": {},
+    "effects": [
+      "Gain 5¢"
+    ],
+    "rewards": {
+      "Coin": 5
+    },
+    "threePlus": false,
+    "subtype": "Nickel Card"
+  },
+  "b2-four_cents-8": {
+    "stats": {},
+    "effects": [
+      "Gain 4¢."
+    ],
+    "rewards": {
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "4 Cent Card"
+  },
+  "b2-four_cents-4": {
+    "stats": {},
+    "effects": [
+      "Gain 4¢."
+    ],
+    "rewards": {
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "4 Cent Card"
+  },
+  "b2-four_cents-6": {
+    "stats": {},
+    "effects": [
+      "Gain 4¢."
+    ],
+    "rewards": {
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "4 Cent Card"
+  },
+  "b2-lil_battery_4": {
+    "stats": {},
+    "effects": [
+      "Recharge an item."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Battery Card"
+  },
+  "b2-lil_battery_2": {
+    "stats": {},
+    "effects": [
+      "Recharge an item."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Battery Card"
+  },
+  "b2-mega_battery": {
+    "stats": {},
+    "effects": [
+      "Choose a player. Recharge each item they control."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Battery Card"
+  },
+  "b2-a_nickel-5": {
+    "stats": {},
+    "effects": [
+      "Gain 5¢"
+    ],
+    "rewards": {
+      "Coin": 5
+    },
+    "threePlus": false,
+    "subtype": "Nickel Card"
+  },
+  "b2-a_nickel": {
+    "stats": {},
+    "effects": [
+      "Gain 5¢"
+    ],
+    "rewards": {
+      "Coin": 5
+    },
+    "threePlus": false,
+    "subtype": "Nickel Card"
+  },
+  "b2-a_dime": {
+    "stats": {},
+    "effects": [
+      "Gain 10¢."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Nickel Card"
+  },
+  "b2-lil_battery": {
+    "stats": {},
+    "effects": [
+      "Recharge an item."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Battery Card"
+  },
+  "b2-lil_battery_3": {
+    "stats": {},
+    "effects": [
+      "Recharge an item."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Battery Card"
+  },
+  "b2-a_nickel-4": {
+    "stats": {},
+    "effects": [
+      "Gain 5¢"
+    ],
+    "rewards": {
+      "Coin": 5
+    },
+    "threePlus": false,
+    "subtype": "Nickel Card"
+  },
+  "b2-bomb-2": {
+    "stats": {},
+    "effects": [
+      "Deal 1 damage to a Monster or Player."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Bomb Card"
+  },
+  "b2-gold_bomb": {
+    "stats": {},
+    "effects": [
+      "Deal 3 damage to a monster or player."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Bomb Card"
+  },
+  "b2-bomb-3": {
+    "stats": {},
+    "effects": [
+      "Deal 1 damage to a Monster or Player."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Bomb Card"
+  },
+  "b2-dice_shard": {
+    "stats": {},
+    "effects": [
+      "Choose a dice roll. Its controller rerolls it."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Dice Shard/Soul Heart Card"
+  },
+  "b2-butter_bean": {
+    "stats": {},
+    "effects": [
+      "Cancel the ↷ or $ ability of an item or a loot being played."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Butter Bean Card"
+  },
+  "b2-butter_bean_2": {
+    "stats": {},
+    "effects": [
+      "Cancel the ↷ or $ ability of an item or a loot being played."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Butter Bean Card"
+  },
+  "b2-dice_shard_3": {
+    "stats": {},
+    "effects": [
+      "Choose a dice roll. Its controller rerolls it."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Dice Shard/Soul Heart Card"
+  },
+  "b2-butter_bean_3": {
+    "stats": {},
+    "effects": [
+      "Cancel the ↷ or $ ability of an item or a loot being played."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Butter Bean Card"
+  },
+  "b2-dice_shard_2": {
+    "stats": {},
+    "effects": [],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Dice Shard/Soul Heart Card"
+  },
+  "b2-bomb": {
+    "stats": {},
+    "effects": [
+      "Deal 1 damage to a Monster or Player."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Bomb Card"
+  },
+  "b2-bomb-4": {
+    "stats": {},
+    "effects": [
+      "Deal 1 damage to a Monster or Player."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Bomb Card"
+  },
+  "b2-o_the_fool": {
+    "stats": {},
+    "effects": [
+      "End the turn. Cancel everything that hasn't resolved."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-soul_heart_2": {
+    "stats": {},
+    "effects": [
+      "Choose a player. Prevent the next 1 damage they would take this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Dice Shard/Soul Heart Card"
+  },
+  "b2-ii_the_high_priestess": {
+    "stats": {},
+    "effects": [
+      "Choose a player or monster, then roll- Deal damage to them equal to the result."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-i_the_magician": {
+    "stats": {},
+    "effects": [
+      "Change the result of a dice roll to a number of your choosing."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-iv_the_emperor": {
+    "stats": {},
+    "effects": [
+      "Look at the top 5 cards of the monster deck. Put 1 on top and the rest on the bottom."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-pills": {
+    "stats": {},
+    "effects": [
+      "Roll- 1-2: Loot 1.",
+      "3-4: Loot 3.",
+      "5-6: Discard 1 loot card."
+    ],
+    "rewards": {
+      "Loot": 3
+    },
+    "threePlus": false,
+    "subtype": "Pill/Rune Card"
+  },
+  "b2-pills_3": {
+    "stats": {},
+    "effects": [
+      "Roll- 1-2: You gain +1 [ATK] till the end of turn.",
+      "3-4: You gain +1 [HP] till the end of turn.",
+      "5-6: Take 1 damage."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Pill/Rune Card"
+  },
+  "b2-soul_heart": {
+    "stats": {},
+    "effects": [
+      "Choose a player. Prevent the next 1 damage they would take this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Dice Shard/Soul Heart Card"
+  },
+  "b2-iii_the_empress": {
+    "stats": {},
+    "effects": [
+      "Choose a player. They gain +1 [ATK] and +1 to dice rolls till end of turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-pills_2": {
+    "stats": {},
+    "effects": [
+      "Roll- 1-2: Gain 4¢.",
+      "3-4: Gain 7¢.",
+      "5-6: Lose 4¢."
+    ],
+    "rewards": {
+      "Coin": 7
+    },
+    "threePlus": false,
+    "subtype": "Pill/Rune Card"
+  },
+  "b2-v_the_hierophant": {
+    "stats": {},
+    "effects": [
+      "Choose a player or monster. Prevent the next instance of up to 2 damage they would take this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-xii_the_hanged_man": {
+    "stats": {},
+    "effects": [
+      "Look at the top card of each deck. You may put any of those cards on the bottom of their deck, then loot 2."
+    ],
+    "rewards": {
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-vi_the_lovers": {
+    "stats": {},
+    "effects": [
+      "Choose a player. They gain +2 [HP] till end of turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-vii_the_chariot": {
+    "stats": {},
+    "effects": [
+      "Choose a player. They gain +1 [ATK] and +1 [HP] till end of turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-xi_strength": {
+    "stats": {},
+    "effects": [
+      "Choose a player. They gain +1 [ATK] till end of turn and may attack an additional time this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-xiii_death": {
+    "stats": {},
+    "effects": [
+      "Kill a player."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-x_wheel_of_fortune": {
+    "stats": {},
+    "effects": [
+      "Roll- 1: Gain 1¢. 2: Take 2 damage. 3. Loot 3. 4. Lose 4¢. 5: Gain 5¢. 6: Gain +1 treasure."
+    ],
+    "rewards": {
+      "Coin": 5,
+      "Loot": 3,
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-viii_justice": {
+    "stats": {},
+    "effects": [
+      "Choose a player. Loot and gain ¢ until you have the same number of each as they do."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-ix_the_hermit": {
+    "stats": {},
+    "effects": [
+      "Look at the top 5 cards of the treasure deck. Put 1 on top and the rest on the bottom."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-xiv_temperance": {
+    "stats": {},
+    "effects": [
+      "Choose one- Take 1 damage and gain 4¢. Take 2 damage and gain 8¢."
+    ],
+    "rewards": {
+      "Coin": 8
+    },
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-ehwaz": {
+    "stats": {},
+    "effects": [
+      "Put each monster not being attacked into discard and replace each with the top card of the monster deck."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Pill/Rune Card"
+  },
+  "b2-xvii_the_stars": {
+    "stats": {},
+    "effects": [
+      "Gain +1 treasure."
+    ],
+    "rewards": {
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-xxi_the_world": {
+    "stats": {},
+    "effects": [
+      "Look at each player's hand, then loot 2."
+    ],
+    "rewards": {
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-dagaz": {
+    "stats": {},
+    "effects": [
+      "Choose one- Destroy a curse. Choose a player. Prevent the next 1 damage they would take this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Pill/Rune Card"
+  },
+  "b2-xviii_the_moon": {
+    "stats": {},
+    "effects": [
+      "Look at the top 5 cards of the loot deck. Put 1 on top and the rest on the bottom."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-xv_the_devil": {
+    "stats": {},
+    "effects": [
+      "Destroy an item you control. If you do, steal a non-eternal item from a player or from the shop."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-xix_the_sun": {
+    "stats": {},
+    "effects": [
+      "Put this on the bottom of the loot deck. If you do, take an extra turn after this one if it's your turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-xx_judgement": {
+    "stats": {},
+    "effects": [
+      "Choose the player with the most souls or tied for the most. That player destroys a soul they control."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-xvi_the_tower": {
+    "stats": {},
+    "effects": [
+      "Roll- 1-2: Each player takes 1 damage.",
+      "3-4: Each monster takes 1 damage.",
+      "5-6: Each player takes 2 damage."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Wildcard Card"
+  },
+  "b2-blank_rune": {
+    "stats": {},
+    "effects": [
+      "Roll- 1: Each player gains 1¢. 2: Each player loots 2. 3: Each player takes 3 damage. 4: Each player gains 4¢. 5: Each player loots 5. 6: Each player gains 6¢."
+    ],
+    "rewards": {
+      "Coin": 6,
+      "Loot": 5
+    },
+    "threePlus": false,
+    "subtype": "Pill/Rune Card"
+  },
+  "b2-swallowed_penny": {
+    "stats": {},
+    "effects": [
+      "Each time you take damage, gain 1¢."
+    ],
+    "rewards": {
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "Trinket Card"
+  },
+  "b2-counterfeit_penny": {
+    "stats": {},
+    "effects": [
+      "If you would gain any number of ¢, gain that much +1¢ instead."
+    ],
+    "rewards": {
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "Trinket Card"
+  },
+  "b2-lost_soul": {
+    "stats": {},
+    "effects": [
+      "When this enters play, it becomes a soul. (It's no longer an item.)"
+    ],
+    "rewards": {
+      "Soul": 1
+    },
+    "threePlus": false,
+    "subtype": "Lost Soul Card"
+  },
+  "b2-bloody_penny": {
+    "stats": {},
+    "effects": [
+      "Each time a player dies, before paying penalties, loot 1."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Trinket Card"
+  },
+  "b2-golden_horseshoe": {
+    "stats": {},
+    "effects": [
+      "At the start of your turn, look at the top card of the treasure deck, you may put it on the bottom."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Trinket Card"
+  },
+  "b2-guppys_hairball": {
+    "stats": {},
+    "effects": [
+      "Each time you would take damage, roll- 6: Prevent 1 of that damage."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Trinket Card"
+  },
+  "b2-curved_horn": {
+    "stats": {},
+    "effects": [
+      "Gain +1 [ATK] for your first attack roll each turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Trinket Card"
+  },
+  "b2-purple_heart": {
+    "stats": {},
+    "effects": [
+      "At the start of your turn, look at the top card of the monster deck. You may put it on the bottom."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Trinket Card"
+  },
+  "b2-cains_eye": {
+    "stats": {},
+    "effects": [
+      "At the start of your turn, look at the top card of the loot deck. You may put it on the bottom."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Trinket Card"
+  },
+  "b2-broken_ankh": {
+    "stats": {},
+    "effects": [
+      "When you would die, roll-",
+      "6: Prevent death. If it's your turn, cancel everything that hasn't resolved and end it."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Trinket Card"
+  },
+  "b2-black_bony": {
+    "stats": {
+      "HP": "3",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, it deals 1 damage to the player who killed it."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-big_spider": {
+    "stats": {
+      "HP": "3",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, the active player may attack the monster deck an additional time."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-dip": {
+    "stats": {
+      "HP": "1",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [],
+    "rewards": {
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-boom_fly": {
+    "stats": {
+      "HP": "1",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, it deals 1 damage to each player."
+    ],
+    "rewards": {
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-conjoined_fatty": {
+    "stats": {
+      "HP": "4",
+      "DC": "3",
+      "ATK": "2"
+    },
+    "effects": [],
+    "rewards": {
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-dinga": {
+    "stats": {
+      "HP": "3",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies on an attack roll of 6, double its rewards."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-clotty": {
+    "stats": {
+      "HP": "2",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [],
+    "rewards": {
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-delirium": {
+    "stats": {
+      "HP": "5",
+      "DC": "4",
+      "ATK": "3"
+    },
+    "effects": [
+      "Other monsters have +1 [DC] .",
+      "When this dies, put it in the monster deck 6 cards from the top."
+    ],
+    "rewards": {
+      "Treasure": 2
+    },
+    "threePlus": false,
+    "subtype": "Epic Boss Card"
+  },
+  "b2-dank_globin": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "2"
+    },
+    "effects": [
+      "When this dies, the active player forces a player to discard 2 loot cards."
+    ],
+    "rewards": {
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-cod_worm": {
+    "stats": {
+      "HP": "2",
+      "DC": "5",
+      "ATK": "0"
+    },
+    "effects": [],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-fly": {
+    "stats": {
+      "HP": "1",
+      "DC": "2",
+      "ATK": "1"
+    },
+    "effects": [],
+    "rewards": {
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-fat_bat": {
+    "stats": {
+      "HP": "3",
+      "DC": "5",
+      "ATK": "1"
+    },
+    "effects": [],
+    "rewards": {
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-evil_twin": {
+    "stats": {
+      "HP": "3",
+      "DC": "5",
+      "ATK": "2"
+    },
+    "effects": [
+      "Damage dealt to this is also dealt to the player to the active player's left."
+    ],
+    "rewards": {
+      "Treasure": 1
+    },
+    "threePlus": true,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-horf": {
+    "stats": {
+      "HP": "1",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "Combat damage this deals is increased by 1 on attack rolls of 2."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-dople": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "2"
+    },
+    "effects": [
+      "Damage dealt to this is also dealt to the player to the active player's right."
+    ],
+    "rewards": {
+      "Coin": 7
+    },
+    "threePlus": true,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-hopper": {
+    "stats": {
+      "HP": "2",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "This takes no combat damage on attack rolls of 6."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-greedling": {
+    "stats": {
+      "HP": "2",
+      "DC": "5",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, the active player chooses a player. They lose 7¢."
+    ],
+    "rewards": {
+      "Coin": 7
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-fatty": {
+    "stats": {
+      "HP": "4",
+      "DC": "2",
+      "ATK": "1"
+    },
+    "effects": [],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-keeper_head": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time this deals combat damage to a player, they lose 2¢."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-hanger": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "2"
+    },
+    "effects": [
+      "When this dies, expand shop slots by 1."
+    ],
+    "rewards": {
+      "Coin": 7
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-leaper": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "Combat damage this deals is doubled on attack rolls of 1."
+    ],
+    "rewards": {
+      "Coin": 5
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-pale_fatty": {
+    "stats": {
+      "HP": "4",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [],
+    "rewards": {
+      "Coin": 6
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-moms_dead_hand": {
+    "stats": {
+      "HP": "2",
+      "DC": "5",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, the active player may steal a non-eternal item another player controls."
+    ],
+    "rewards": {
+      "Treasure": 1,
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-portal": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, the active player must make an additional attack."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-leech": {
+    "stats": {
+      "HP": "1",
+      "DC": "4",
+      "ATK": "2"
+    },
+    "effects": [],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-moms_hand": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "When the attacking player rolls an attack roll of 6, cancel everything that hasn't resolved and end the turn."
+    ],
+    "rewards": {
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-pooter": {
+    "stats": {
+      "HP": "2",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-mulligan": {
+    "stats": {
+      "HP": "1",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, expand monster slots by 1."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-mulliboom": {
+    "stats": {
+      "HP": "1",
+      "DC": "2",
+      "ATK": "4!"
+    },
+    "effects": [
+      "When this dies, the active player deals 3 damage to a player."
+    ],
+    "rewards": {
+      "Coin": 6
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-moms_eye": {
+    "stats": {
+      "HP": "1",
+      "DC": "4",
+      "ATK": "2"
+    },
+    "effects": [
+      "When this dies, the active player may look at a player's hand."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-red_host": {
+    "stats": {
+      "HP": "2",
+      "DC": "3",
+      "ATK": "2"
+    },
+    "effects": [],
+    "rewards": {
+      "Coin": 5
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-spider": {
+    "stats": {
+      "HP": "1",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-psy_horf": {
+    "stats": {
+      "HP": "1",
+      "DC": "5",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, the active player recharges each item they control."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-ring_of_flies": {
+    "stats": {
+      "HP": "3",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time the attacking player rolls an attack roll of 3, they must steal a loot card from from another player at random."
+    ],
+    "rewards": {
+      "Loot": 1,
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-squirt": {
+    "stats": {
+      "HP": "2",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-rage_creep": {
+    "stats": {
+      "HP": "1",
+      "DC": "5",
+      "ATK": "1"
+    },
+    "effects": [
+      "Damage this deals to the active player is also dealt to the player to their left."
+    ],
+    "rewards": {
+      "Loot": 2
+    },
+    "threePlus": true,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-wizoob": {
+    "stats": {
+      "HP": "3",
+      "DC": "5",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, the active player chooses a player. That player destroys a soul they control."
+    ],
+    "rewards": {
+      "Loot": 3
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-swarm_of_flies": {
+    "stats": {
+      "HP": "5",
+      "DC": "2",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time the attacking player rolls an attack roll of 5, they take 1 damage."
+    ],
+    "rewards": {
+      "Coin": 5
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-trite": {
+    "stats": {
+      "HP": "1",
+      "DC": "5",
+      "ATK": "1"
+    },
+    "effects": [],
+    "rewards": {
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-stoney": {
+    "stats": {
+      "HP": "3",
+      "DC": "0",
+      "ATK": "0"
+    },
+    "effects": [
+      "Monsters have +1 [DC] .",
+      "This can't be attacked.",
+      "When another monster dies, this dies."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Basic Monster Card"
+  },
+  "b2-cursed_fatty": {
+    "stats": {
+      "HP": "4",
+      "DC": "2",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Curse Effect] Each time a player rolls a ➄, they discard a loot card."
+    ],
+    "rewards": {
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Cursed Monster Card"
+  },
+  "b2-holy_dip": {
+    "stats": {
+      "HP": "1",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time a player rolls a ❶, they gain 1¢."
+    ],
+    "rewards": {
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "Holy/Charmed Monster Card"
+  },
+  "b2-holy_moms_eye": {
+    "stats": {
+      "HP": "1",
+      "DC": "4",
+      "ATK": "2"
+    },
+    "effects": [
+      "Each time a player rolls a ❷, they may recharge an item."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Holy/Charmed Monster Card"
+  },
+  "b2-holy_keeper_head": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time a player rolls a ❹, they gain 2¢."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Holy/Charmed Monster Card"
+  },
+  "b2-cursed_horf": {
+    "stats": {
+      "HP": "1",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Curse Effect] Each time a player rolls a ➁, they take 2 damage."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Cursed Monster Card"
+  },
+  "b2-cursed_moms_hand": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Curse Effect] When the active player rolls a 6, cancel everything that hasn't resolved and end the turn."
+    ],
+    "rewards": {
+      "Coin": 4
+    },
+    "threePlus": false,
+    "subtype": "Cursed Monster Card"
+  },
+  "b2-cursed_gaper": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Curse Effect] Each time a player rolls a ➃, each monster gains +1 [ATK] till end of turn."
+    ],
+    "rewards": {
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Cursed Monster Card"
+  },
+  "b2-holy_dinga": {
+    "stats": {
+      "HP": "3",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time a player rolls a ❻, they heal 1 [HP] ."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Holy/Charmed Monster Card"
+  },
+  "b2-cursed_psy_horf": {
+    "stats": {
+      "HP": "1",
+      "DC": "5",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Curse Effect] Each time a player activates an item, they take 1 damage."
+    ],
+    "rewards": {
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Cursed Monster Card"
+  },
+  "b2-cursed_keeper_head": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "[Curse Effect] Each time a player rolls a ➀, they lose 2¢."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Cursed Monster Card"
+  },
+  "b2-daddy_long_legs": {
+    "stats": {
+      "HP": "4",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time the attacking player rolls an attack roll of 1, each monster gains +1 [DC] till end of turn."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 7
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-carrion_queen": {
+    "stats": {
+      "HP": "3",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "This takes no combat damage on attack rolls of 4 or 5."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-dark_one": {
+    "stats": {
+      "HP": "3",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time this takes damage, it gains +1 [ATK] till end of turn."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-famine": {
+    "stats": {
+      "HP": "2",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, the active player skips their next turn."
+    ],
+    "rewards": {
+      "Loot": 3
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-chub": {
+    "stats": {
+      "HP": "4",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time the attacking player rolls an attack roll of 1, this heals 2 [HP] ."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 7
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-holy_squirt": {
+    "stats": {
+      "HP": "2",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time a player rolls a ❺, they loot 1."
+    ],
+    "rewards": {
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Holy/Charmed Monster Card"
+  },
+  "b2-death": {
+    "stats": {
+      "HP": "3",
+      "DC": "4",
+      "ATK": "2"
+    },
+    "effects": [
+      "When this dies, the active player kills a player."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-envy": {
+    "stats": {
+      "HP": "2",
+      "DC": "5",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, the active player must make an additional attack."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-conquest": {
+    "stats": {
+      "HP": "2",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, the active player must make an additional attack."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 6
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-gemini": {
+    "stats": {
+      "HP": "3",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "While this is at 1 [HP] , it has +1 [ATK] ."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 5
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-little_horn": {
+    "stats": {
+      "HP": "2",
+      "DC": "6",
+      "ATK": "1"
+    },
+    "effects": [],
+    "rewards": {
+      "Soul": 1,
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-lust": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time this takes combat damage, it deals 1 damage to the attacking player."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-monstro": {
+    "stats": {
+      "HP": "4",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 6
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-mask_of_infamy": {
+    "stats": {
+      "HP": "4",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "While this is at 1 [HP] , it has +2 [DC] ."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-larry_jr": {
+    "stats": {
+      "HP": "4",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "While this is at 2 [HP] or less, it has +1 [DC] ."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 6
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-gluttony": {
+    "stats": {
+      "HP": "4",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time this takes combat damage on an attack roll of 6, deal 1 damage to the player to the active player's left."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-mega_fatty": {
+    "stats": {
+      "HP": "3",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time this deals combat damage, it heals 1 [HP] ."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-gurdy": {
+    "stats": {
+      "HP": "5",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 7
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-greed": {
+    "stats": {
+      "HP": "3",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time this deals damage, each player loses 4¢."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 9
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-gurdy_jr": {
+    "stats": {
+      "HP": "2",
+      "DC": "5",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time the attacking player activates an item, they take 1 damage."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-the_duke_of_flies": {
+    "stats": {
+      "HP": "4",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time this would take damage, the active player rolls- 1: Prevent that damage."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-pin": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "This takes no combat damage on attack rolls of 6."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 5
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-pride": {
+    "stats": {
+      "HP": "2",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "When an attack is declared on this, the active player chooses a player. That player discards 2 loot cards."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 5
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-sloth": {
+    "stats": {
+      "HP": "3",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, the player that killed it discards their hand."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 1
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-peep": {
+    "stats": {
+      "HP": "3",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, search the monster deck for a card named The Bloat and put it in a monster slot not being attacked, then shuffle the monster deck."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-rag_man": {
+    "stats": {
+      "HP": "2",
+      "DC": "3",
+      "ATK": "2"
+    },
+    "effects": [
+      "When this dies, after gaining rewards, the active player rolls- 1 or 6: Put this on top of the monster deck."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Loot": 3
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-the_haunt": {
+    "stats": {
+      "HP": "3",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "Every other time this takes damage each turn, it gains +1 [DC] till end of turn."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-scolex": {
+    "stats": {
+      "HP": "3",
+      "DC": "5",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time this deals combat damage to a player, they discard a loot card."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-the_bloat": {
+    "stats": {
+      "HP": "4",
+      "DC": "4",
+      "ATK": "2"
+    },
+    "effects": [
+      "Each time this deals combat damage, it deals 1 damage to each non-active player."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-pestilence": {
+    "stats": {
+      "HP": "4",
+      "DC": "4",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, the active player deals 2 damage divided as they choose to any number of monsters or players."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-satan": {
+    "stats": {
+      "HP": "6",
+      "DC": "4",
+      "ATK": "2"
+    },
+    "effects": [
+      "Each time the attacking player rolls an attack roll of 6, they choose a living player. That player dies."
+    ],
+    "rewards": {
+      "Soul": 2,
+      "Treasure": 2
+    },
+    "threePlus": true,
+    "subtype": "Epic Boss Card"
+  },
+  "b2-mom": {
+    "stats": {
+      "HP": "5",
+      "DC": "4",
+      "ATK": "2"
+    },
+    "effects": [
+      "Combat damage this deals is doubled on attack rolls of 1.",
+      "When this dies, expand monsters slots by 1."
+    ],
+    "rewards": {
+      "Soul": 2,
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Epic Boss Card"
+  },
+  "b2-war": {
+    "stats": {
+      "HP": "3",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "Each time this takes damage, it gains +1 [ATK] till end of turn."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 8
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-the_lamb": {
+    "stats": {
+      "HP": "6",
+      "DC": "3",
+      "ATK": "6!"
+    },
+    "effects": [
+      "When this dies, the active player may choose another player. They give you a soul they control."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Epic Boss Card"
+  },
+  "b2-curse_of_the_blind": {
+    "stats": {},
+    "effects": [
+      "[Curse Effect] Monsters have +1 [DC] on your turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Curse Card"
+  },
+  "b2-wrath": {
+    "stats": {
+      "HP": "3",
+      "DC": "3",
+      "ATK": "1"
+    },
+    "effects": [
+      "When this dies, the active player rolls- 1-3: Each player takes 1 damage.",
+      "4-6: Each player takes 2 damage."
+    ],
+    "rewards": {
+      "Soul": 1,
+      "Coin": 6
+    },
+    "threePlus": false,
+    "subtype": "Boss Card"
+  },
+  "b2-curse_of_loss": {
+    "stats": {},
+    "effects": [
+      "[Curse Effect] When you die, destroy a soul you control."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Curse Card"
+  },
+  "b2-curse_of_greed": {
+    "stats": {},
+    "effects": [
+      "[Curse Effect] At the end of your turn, lose 4¢."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Curse Card"
+  },
+  "b2-curse_of_amnesia": {
+    "stats": {},
+    "effects": [
+      "[Curse Effect] At the end of your turn, discard 2 loot cards."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Curse Card"
+  },
+  "b2-curse_of_pain": {
+    "stats": {},
+    "effects": [
+      "[Curse Effect] At the start of your turn, take 1 damage."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Curse Card"
+  },
+  "b2-gold_chest": {
+    "stats": {},
+    "effects": [
+      "Roll- 1-2: Gain +1 Treasure.",
+      "3-4: Gain 5¢.",
+      "5-6: Gain 7¢."
+    ],
+    "rewards": {
+      "Treasure": 1,
+      "Coin": 7
+    },
+    "threePlus": false,
+    "subtype": "Good Event Card"
+  },
+  "b2-greed_event": {
+    "stats": {},
+    "effects": [
+      "Choose the player with the most ¢ or tied for the most. That player loses all their ¢."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Bad Event Card"
+  },
+  "b2-dark_chest": {
+    "stats": {},
+    "effects": [
+      "Roll- 1-2: Loot 1.",
+      "3-4: Gain 3¢.",
+      "5-6: Take 2 damage."
+    ],
+    "rewards": {
+      "Loot": 1,
+      "Coin": 3
+    },
+    "threePlus": false,
+    "subtype": "Good Event Card"
+  },
+  "b2-ambush": {
+    "stats": {},
+    "effects": [
+      "The active player must attack the monster deck 2 times this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Bad Event Card"
+  },
+  "b2-devil_deal": {
+    "stats": {},
+    "effects": [
+      "Choose one- Put this into discard. Loot 2. Take 1 damage. Take 2 damage. Search the treasure deck for a guppy item, gain it, then shuffle the treasure deck."
+    ],
+    "rewards": {
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Good Event Card"
+  },
+  "b2-gold_chest_2": {
+    "stats": {},
+    "effects": [
+      "Roll- 1-2: Gain +1 Treasure.",
+      "3-4: Loot 1.",
+      "5-6: Loot 2."
+    ],
+    "rewards": {
+      "Treasure": 1,
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Good Event Card"
+  },
+  "b2-dark_chest_2": {
+    "stats": {},
+    "effects": [
+      "Roll- 1-2: Gain 1¢.",
+      "3-4: Loot 2.",
+      "5-6: Take 2 damage."
+    ],
+    "rewards": {
+      "Coin": 1,
+      "Loot": 2
+    },
+    "threePlus": false,
+    "subtype": "Good Event Card"
+  },
+  "b2-chest": {
+    "stats": {},
+    "effects": [
+      "Roll- 1-2: Gain 1¢.",
+      "3-4: Gain 3¢.",
+      "5-6: Gain 6¢."
+    ],
+    "rewards": {
+      "Coin": 6
+    },
+    "threePlus": false,
+    "subtype": "Good Event Card"
+  },
+  "b2-chest_2": {
+    "stats": {},
+    "effects": [
+      "Roll- 1-2: Loot 1.",
+      "3-4: Loot 2.",
+      "5-6: Loot 3."
+    ],
+    "rewards": {
+      "Loot": 3
+    },
+    "threePlus": false,
+    "subtype": "Good Event Card"
+  },
+  "b2-cursed_chest": {
+    "stats": {},
+    "effects": [
+      "Roll-",
+      "1-3: Take 1 Damage.",
+      "4-5: Take 2 Damage.",
+      "6: Search the treasure deck for a Guppy item, gain it, then shuffle the treasure deck.",
+      "",
+      ""
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Bad Event Card"
+  },
+  "b2-we_need_to_go_deeper": {
+    "stats": {},
+    "effects": [
+      "Put any number of non-event monster cards in discard on top of the monster deck.",
+      "The active player may attack an additional time this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Good Event Card"
+  },
+  "b2-i_can_see_forever": {
+    "stats": {},
+    "effects": [
+      "Look at the top 6 cards of the loot deck. Put them back in any order, then loot 1."
+    ],
+    "rewards": {
+      "Loot": 1
+    },
+    "threePlus": false,
+    "subtype": "Good Event Card"
+  },
+  "b2-soul_of_greed": {
+    "stats": {},
+    "effects": [
+      "The first player to have 25¢ or more gains this soul."
+    ],
+    "rewards": {
+      "Soul": 1
+    },
+    "threePlus": false,
+    "subtype": "Bonus Soul Card"
+  },
+  "b2-shop_upgrade": {
+    "stats": {},
+    "effects": [
+      "Expand shop slots by 2.",
+      "The active player may attack an additional time this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Good Event Card"
+  },
+  "b2-xl_floor": {
+    "stats": {},
+    "effects": [
+      "Expand monster slots by 1.",
+      "The active player may attack an additional time this turn."
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Good Event Card"
+  },
+  "b2-troll_bombs": {
+    "stats": {},
+    "effects": [
+      "Take 2 damage!"
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Bad Event Card"
+  },
+  "b2-soul_of_guppy": {
+    "stats": {},
+    "effects": [
+      "The first player to control 2 or more guppy items gains this soul."
+    ],
+    "rewards": {
+      "Soul": 1
+    },
+    "threePlus": false,
+    "subtype": "Bonus Soul Card"
+  },
+  "b2-soul_of_gluttony": {
+    "stats": {},
+    "effects": [
+      "The first player to have 10 or more loot cards in their hand gains this soul."
+    ],
+    "rewards": {
+      "Soul": 1
+    },
+    "threePlus": false,
+    "subtype": "Bonus Soul Card"
+  },
+  "b2-mega_troll_bomb": {
+    "stats": {},
+    "effects": [
+      "Each player takes 2 damage!"
+    ],
+    "rewards": {},
+    "threePlus": false,
+    "subtype": "Bad Event Card"
+  },
+  "b2-secret_room": {
+    "stats": {},
+    "effects": [
+      "Roll- 1: Take 3 damage.",
+      "2-3: Discard 2 loot cards.",
+      "4-5: Gain 7¢.",
+      "6: Gain +1 Treasure.",
+      "",
+      ""
+    ],
+    "rewards": {
+      "Coin": 7,
+      "Treasure": 1
+    },
+    "threePlus": false,
+    "subtype": "Good Event Card"
+  }
+}
