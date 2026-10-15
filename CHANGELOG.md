@@ -12,8 +12,8 @@ Origen: revisión `d112a5faad9d53b241fd1416b38a65048fdc373c` del proyecto Four S
   conflictos de versión y ocultación de información privada.
 - Sondeo sin solapamientos y cancelable al cambiar de pantalla; errores de guardado visibles.
 - Generación de token compatible con HTTP en red local.
-- Android admite configurar el origen del backend al compilar; no depende del sitio privado original.
-- Documentación de instalación, API, operación, pruebas y Android; pruebas de integración locales.
+- Eliminada temporalmente la versión Android para centrarse en la web.
+- Documentación de instalación, API, operación, pruebas; pruebas de integración locales.
 
 Esta entrega es una copia portable: no publica cambios en el sitio existente y no
 contiene cuentas, partidas, datos de salas ni claves de firma del proyecto anterior.

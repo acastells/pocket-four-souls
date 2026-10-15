@@ -17,5 +17,3 @@ Referencias técnicas de la adaptación local:
 
 - https://nodejs.org/download/release/v22.13.1/docs/api/sqlite.html
 - https://vite.dev/guide/api-javascript
-- https://developer.android.com/tools/aapt2
-- https://developer.android.com/tools/apksigner

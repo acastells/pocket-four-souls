@@ -44,8 +44,6 @@ y peticiones HTTP al servidor. No equivale a una auditoría formal de todas las 
 oficiales ni a probar todas las combinaciones de 340 cartas. No se ha realizado una
 prueba visual exhaustiva en dispositivos ni una prueba de carga.
 
-El código Android se incluye para compilarlo por separado. Esta edición no entrega una
-APK nueva verificada en dispositivo. Consulta android/README.md antes de compilar.
 La ausencia de errores del linter no demuestra por sí sola ausencia de defectos de diseño.
 
 ## Resultado de esta entrega
@@ -58,6 +56,5 @@ Verificado en Linux con Node.js 24.19.0:
 - Compilación Vite y servidor Node: correcta.
 - Prueba HTTP en desarrollo y producción: página, imagen de carta, creación de sala,
   unión de segundo jugador e inicio de partida correctos.
-- Sintaxis del script Python Android comprobada; APK no recompilada en esta entrega.
 
 No se ha ejecutado el paquete en Windows o macOS en esta verificación.

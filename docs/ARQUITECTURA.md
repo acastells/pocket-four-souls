@@ -2,7 +2,7 @@
 
 ## Estructura
 
-- `mobile/`: aplicación React compartida por web y Android; el nombre viene de su origen móvil.
+- `mobile/`: aplicación React web; el nombre viene de su origen móvil.
 - `mobile/hooks/useGameSession.ts`: estado de sesión, exclusión de acciones en curso,
   sondeo cancelable sin peticiones solapadas, guardado y recuperación.
 - `mobile/services/session.ts`: transporte HTTP, identidad del dispositivo y almacenamiento.
@@ -21,7 +21,6 @@
 - `server/room-service.ts`: casos de uso y autorización de asientos.
 - `server/room-store.ts`: SQLite y escritura condicional por versión.
 - `server/http.ts`, `static.ts`, `main.ts`: HTTP, recursos estáticos y arranque.
-- `android/`: anfitrión Java WebView y script de compilación.
 
 ## Flujo
 

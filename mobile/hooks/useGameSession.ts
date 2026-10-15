@@ -33,8 +33,11 @@ export function useGameSession() {
     } catch (error) {
       setError(message(error));
     }
-    const invitation = new URLSearchParams(location.search).get("room");
-    if (invitation) {
+    const invitation = new URLSearchParams(location.search)
+      .get("room")
+      ?.trim()
+      .toUpperCase();
+    if (invitation && /^[A-F0-9]{8}$/.test(invitation)) {
       setCode(invitation);
       setMode("online");
     }
@@ -131,10 +134,13 @@ export function useGameSession() {
     }
   }
   function reset() {
+    // Leaving an online room must not wipe the local solo save.
+    const finishedSolo = game?.mode === "solo";
     setGame(null);
     setScreen("home");
     setRoom("");
     meta.current = { room: "", version: -1 };
+    if (!finishedSolo) return;
     try {
       clearSolo();
       setResume(false);

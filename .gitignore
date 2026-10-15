@@ -2,7 +2,3 @@ node_modules/
 dist/
 data/
 .env
-*.keystore
-android/build/
-android/web/
-mobile-output/

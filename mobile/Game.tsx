@@ -14,7 +14,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Card, Action, soulCount } from "@/lib/game";
-export default function Home({ native = false }: { native?: boolean }) {
+export default function Home() {
   const {
     game,
     mode,
@@ -124,19 +124,21 @@ export default function Home({ native = false }: { native?: boolean }) {
                 Online · 2–4
               </button>
             </nav>
+            {game && (
+              <button className="primary" onClick={() => setScreen("game")}>
+                Volver a la partida <ArrowRight size={18} />
+              </button>
+            )}
             {mode === "solo" ? (
               <>
                 <p>Dos personajes. Cuatro almas. Ocho rondas.</p>
                 <button className="primary" onClick={start}>
                   Nueva partida <ArrowRight size={18} />
                 </button>
-                {resume && (
+                {resume && game?.mode !== "solo" && (
                   <button onClick={resumeSolo}>Continuar partida</button>
                 )}
-                <small>
-                  Guardado automático
-                  {native ? " · disponible sin conexión" : ""}.
-                </small>
+                <small>Guardado automático.</small>
               </>
             ) : (
               <>
@@ -407,14 +409,15 @@ export default function Home({ native = false }: { native?: boolean }) {
                         </button>
                       </>
                     ))}
-                  {!game.prompt && (
-                    <button
-                      disabled={busy || game.priority !== activeSeat}
-                      onClick={() => action({ type: "pass" })}
-                    >
-                      Ceder prioridad
-                    </button>
-                  )}
+                  {!game.prompt &&
+                    !(game.mode === "online" && game.stack.length > 0) && (
+                      <button
+                        disabled={busy || game.priority !== activeSeat}
+                        onClick={() => action({ type: "pass" })}
+                      >
+                        Ceder prioridad
+                      </button>
+                    )}
                 </div>
               </aside>
               <section className="hand">

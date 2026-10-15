@@ -1,4 +1,4 @@
-/** Public game API shared by browser, native build, server and tests. */
+/** Public game API shared by browser, server and tests. */
 export * from "./game-types";
 export { Engine } from "./engine";
 export { newGame, act, redact, cardBlock, getMonsterStats } from "./actions";

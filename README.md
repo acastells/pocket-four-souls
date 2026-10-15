@@ -16,7 +16,7 @@ npm ci
 npm run dev
 ```
 
-2. Abre **http://127.0.0.1:5173**. 
+2. Abre **http://127.0.0.1:5173**.
 
 ## Partidas entre varios dispositivos
 
@@ -48,7 +48,7 @@ npm run check
 ```
 
 Ejecuta TypeScript estricto, ESLint sin avisos, comprobación de formato, pruebas
-unitarias/integración y compilación. No requiere Android SDK.
+unitarias/integración y compilación.
 Los controles no sustituyen una revisión humana de todas las combinaciones de cartas.
 Véase [pruebas y límites de validación](docs/PRUEBAS.md).
 
@@ -61,9 +61,8 @@ Véase [pruebas y límites de validación](docs/PRUEBAS.md).
 | [API](docs/API.md)                      | Peticiones, respuestas, identidad, privacidad y concurrencia   |
 | [Operación](docs/OPERACION.md)          | Copias de seguridad, despliegue, seguridad y actualización     |
 | [Desarrollo y pruebas](docs/PRUEBAS.md) | Comandos, cobertura real y cómo añadir efectos                 |
-| [Android](android/README.md)            | Herramientas, compilación, firma y configuración del servidor  |
 | [Cambios](CHANGELOG.md)                 | Diferencias respecto a la edición de Sites                     |
 | [Créditos](THIRD_PARTY_NOTICES.md)      | Procedencia de cartas y dependencias                           |
 
 No se incluyen dependencias instaladas, credenciales, bases de datos de jugadores,
-claves de firma, binarios APK ni el historial privado del repositorio.
+ni el historial privado del repositorio.

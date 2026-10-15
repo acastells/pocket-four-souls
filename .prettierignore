@@ -4,5 +4,3 @@ data
 public
 package-lock.json
 lib/*.json
-android/build
-android/web

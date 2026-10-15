@@ -1,8 +1,1 @@
-export const image = (c: { id: string }) =>
-  (typeof location !== "undefined" &&
-  location.pathname.startsWith("/pocket-native/")
-    ? "/pocket-native"
-    : "") +
-  "/cards/" +
-  c.id +
-  ".png";
+export const image = (c: { id: string }) => "/cards/" + c.id + ".png";
