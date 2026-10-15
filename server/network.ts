@@ -1,7 +1,8 @@
 import { networkInterfaces, type NetworkInterfaceInfo } from "node:os";
-import type { ServerResponse } from "node:http";
+import type { IncomingMessage, ServerResponse } from "node:http";
 const WILDCARD_HOSTS = ["0.0.0.0", "::", ""];
 const LOOPBACK_HOSTS = ["127.0.0.1", "localhost", "::1"];
+const LOOPBACK_PEERS = ["127.0.0.1", "::1", "::ffff:127.0.0.1"];
 
 /** Lower is better: home networks first, link-local addresses last. */
 function rank(address: string) {
@@ -31,11 +32,18 @@ export function lanUrls(
     .map((address) => `http://${address}:${port}`);
 }
 
-export function sendNetwork(res: ServerResponse, host: string, port: number) {
+/** Only the machine running the server learns its LAN addresses. */
+export function sendNetwork(
+  req: IncomingMessage,
+  res: ServerResponse,
+  host: string,
+  port: number,
+) {
+  const local = LOOPBACK_PEERS.includes(req.socket.remoteAddress ?? "");
   res.writeHead(200, {
     "Content-Type": "application/json; charset=utf-8",
     "Cache-Control": "no-store",
     "X-Content-Type-Options": "nosniff",
   });
-  res.end(JSON.stringify({ urls: lanUrls(host, port) }));
+  res.end(JSON.stringify({ urls: local ? lanUrls(host, port) : [] }));
 }

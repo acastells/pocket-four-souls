@@ -33,7 +33,7 @@ const server = createServer((req, res) => {
     return;
   }
   if (pathname === "/api/network" && req.method === "GET") {
-    sendNetwork(res, host, port);
+    sendNetwork(req, res, host, port);
     return;
   }
   if (pathname.startsWith("/api/")) {

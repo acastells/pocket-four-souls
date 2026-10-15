@@ -42,7 +42,8 @@ npm start
 
 Se sirve la misma interfaz y la misma API en el puerto configurado. La compilación
 produce `dist/client` y `dist/server`. **El servidor sigue siendo necesario para las salas**.
-Para alojar fuera de tu red, consulta [operación y despliegue](docs/OPERACION.md).
+Para alojar fuera de tu red, consulta [operación y despliegue](docs/OPERACION.md);
+el repositorio incluye `render.yaml` para desplegar en Render con el plan gratuito.
 
 ## Comprobar la calidad
 

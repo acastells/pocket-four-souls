@@ -6,7 +6,8 @@ servidor solo almacena su hash SHA-256. El token identifica un asiento: no es un
 
 `GET /api/network` devuelve `{ "urls": [...] }` con las direcciones de red local por
 las que otros dispositivos pueden llegar al servidor (vacío si solo escucha en
-`127.0.0.1`). La pantalla de espera lo usa para que el QR de invitación funcione
+`127.0.0.1`). Solo responde con direcciones a peticiones del propio equipo; desde
+fuera devuelve una lista vacía. La pantalla de espera lo usa para que el QR de invitación funcione
 aunque el anfitrión haya abierto la app como `localhost`.
 
 ## Peticiones

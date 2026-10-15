@@ -14,6 +14,20 @@ recuperación de asiento. Las salas tampoco se comparten entre instalaciones dis
 No se exporta ninguna base del sitio de Sites. Esta edición crea una base vacía.
 Para reiniciar todas las salas, detén el servidor y mueve `data/` a una copia aparte.
 
+## Render (plan gratuito)
+
+El repositorio incluye `render.yaml`. En Render: New → Blueprint → elige el repositorio
+de GitHub. Despliega la rama `master` con `npm ci && npm run build` y `npm start`, con
+`HOST=0.0.0.0` y Node 24; Render asigna `PORT` y el servidor lo lee. Cada push a
+`master` vuelve a desplegar.
+
+Limitaciones del plan gratuito: el servicio se duerme tras unos 15 minutos sin
+visitas (la siguiente carga tarda alrededor de un minuto) y no tiene disco
+persistente, así que las salas online se pierden en cada reinicio o despliegue.
+El solitario vive en el navegador y no se ve afectado. Para conservar salas, usa un
+plan con disco y apunta `DATABASE_PATH` a él. Comparte la URL `https://….onrender.com`:
+el QR de la sala ya la usa.
+
 ## Servidor propio
 
 1. Instala Node y copia el proyecto con sus cartas.
