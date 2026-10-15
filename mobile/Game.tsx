@@ -24,7 +24,14 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { Card, Action, cardAbilities, cardBlock, key } from "@/lib/game";
+import {
+  Card,
+  Action,
+  Engine,
+  cardAbilities,
+  cardBlock,
+  key,
+} from "@/lib/game";
 export default function Home() {
   const {
     game,
@@ -91,7 +98,10 @@ export default function Home() {
       !!player?.items.some(
         (c) => key(c) === "bum_bo" && (c.counters || 0) >= 25,
       ));
-  const canBuy = canMain && game.purchases > 0;
+  // Same coin threshold as the engine: the cheaper of a shop item or the deck.
+  const price = game ? Math.min(10, new Engine(game).price(activeSeat)) : 0;
+  const enoughCoins = !!player && player.coins >= price;
+  const canBuy = canMain && game.purchases > 0 && enoughCoins;
   const top = game?.stack.at(-1),
     fighting = game?.monsters.find((c) => c.uid === game.combat?.uid);
   // The card shown in the play zone: what is resolving now, or the last play.
@@ -415,9 +425,11 @@ export default function Home() {
                         <button
                           disabled={busy || !canBuy}
                           title={
-                            canMain && !canBuy
-                              ? "Ya has usado tu compra este turno"
-                              : undefined
+                            !canMain || canBuy
+                              ? undefined
+                              : game.purchases <= 0
+                                ? "Ya has usado tu compra este turno"
+                                : `Necesitas ${price}¢ para comprar`
                           }
                           onClick={() => action({ type: "buy" })}
                         >

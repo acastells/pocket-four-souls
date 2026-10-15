@@ -117,13 +117,7 @@ export function Cards({
               {isMonster(c) && !!c.damage && (
                 <b className="damage-badge">−{c.damage} ♥</b>
               )}
-              {!isMonster(c) && (!!c.counters || c.tapped) && (
-                <span>
-                  {[c.counters, c.tapped && "agotado"]
-                    .filter(Boolean)
-                    .join(" · ")}
-                </span>
-              )}
+              {!isMonster(c) && !!c.counters && <span>{c.counters}</span>}
             </button>
           );
         }}
