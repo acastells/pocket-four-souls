@@ -93,7 +93,7 @@ export function newGame(mode: string, names: string[]): Game {
     ),
     round: 1,
     timer: 8,
-    die: 1,
+    die: 0,
     log: [],
     started: mode === "solo",
     winner: null,

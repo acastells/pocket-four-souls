@@ -4,10 +4,11 @@ import { RulesDialog } from "./components/RulesDialog";
 import { CardDialog } from "./components/CardDialog";
 import { useGameSession } from "./hooks/useGameSession";
 import { useHandDraws } from "./hooks/useHandDraws";
+import { useLastPlay } from "./hooks/useLastPlay";
 import { Cards } from "./components/Cards";
-import { Pages } from "./components/Pages";
 import { PlayerStats } from "./components/PlayerStats";
 import { TablePanels, type Panel } from "./components/TablePanels";
+import { DecisionDialog } from "./components/DecisionDialog";
 import { image } from "./services/images";
 import {
   BookOpen,
@@ -23,7 +24,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { Card, Action, cardBlock } from "@/lib/game";
+import { Card, Action, cardAbilities, cardBlock, key } from "@/lib/game";
 export default function Home() {
   const {
     game,
@@ -50,20 +51,18 @@ export default function Home() {
     activeSeat,
   } = useGameSession();
   const { fresh, notice } = useHandDraws(game, room, seat);
+  const lastPlay = useLastPlay(game);
   const [rules, setRules] = useState(false),
     [selected, setSelected] = useState<{ card: Card; from: string } | null>(
       null,
     ),
-    [inspect, setInspect] = useState<number | null>(null),
-    [tab, setTab] = useState("table");
+    [inspect, setInspect] = useState<number | null>(null);
   const [panel, setPanel] = useState<Panel | null>(null);
+  // Id of a decision the player minimized to look at the board.
+  const [hiddenPrompt, setHiddenPrompt] = useState<string | null>(null);
   const player = game?.players[activeSeat];
   function action(action: Action) {
     setSelected(null);
-    if (action.type === "buy" && game && game.purchases <= 0) {
-      setError("Ya has usado tu compra de este turno.");
-      return;
-    }
     void dispatch(action);
   }
   const canMain =
@@ -77,8 +76,29 @@ export default function Home() {
     activeSeat === game.priority &&
     !player?.dead &&
     game.phase === "action";
+  const myPrompt =
+    game?.prompt &&
+    !game.winner &&
+    (game.mode === "solo" || game.prompt.player === seat)
+      ? game.prompt
+      : null;
+  const promptHidden = !!myPrompt && hiddenPrompt === myPrompt.id;
+  // Mirrors the engine's checks so exhausted actions show as disabled.
+  const canAttack =
+    canMain &&
+    (game.attacks > 0 ||
+      !!game.flags.optionalDeck ||
+      !!player?.items.some(
+        (c) => key(c) === "bum_bo" && (c.counters || 0) >= 25,
+      ));
+  const canBuy = canMain && game.purchases > 0;
   const top = game?.stack.at(-1),
     fighting = game?.monsters.find((c) => c.uid === game.combat?.uid);
+  // The card shown in the play zone: what is resolving now, or the last play.
+  const liveCard = top && top.kind !== "roll" ? top.sourceCard : undefined;
+  const shownPlay = top ? liveCard : lastPlay?.sourceCard;
+  const ownerName = (owner: number) =>
+    game?.players[owner]?.character.name ?? "";
   const availableNormal =
     !!game &&
     ((activeSeat === game.turn &&
@@ -93,6 +113,13 @@ export default function Home() {
     !!player &&
     (availableNormal || !player.tapped) &&
     !cardBlock(game, activeSeat, card, "hand");
+  // Passive items stay lit; items whose abilities are all blocked are dimmed.
+  const canUseItem = (card: Card) =>
+    !game ||
+    cardAbilities(card).length === 0 ||
+    cardAbilities(card).some(
+      (_, i) => !cardBlock(game, activeSeat, card, "items", i),
+    );
   // Spending the character is never implicit: without a loot play left, a
   // dropped card opens its dialog so the player chooses explicitly.
   const playFromHand = (card: Card) =>
@@ -275,60 +302,57 @@ export default function Home() {
                   </button>
                 ))}
               </div>
-              <section className="table">
-                <nav className="tabs">
-                  {[
-                    ["table", "Mesa"],
-                    ["inventory", "Objetos"],
-                  ].map(([id, label]) => (
-                    <button
-                      key={id}
-                      className={tab === id ? "active" : ""}
-                      onClick={() => setTab(id)}
-                    >
-                      {label}
-                    </button>
-                  ))}
-                </nav>
-                <div className="table-content">
-                  {tab === "table" ? (
-                    <div className="board">
-                      <section>
-                        <h3>Monstruos</h3>
-                        {cardRow(game.monsters, "monsters")}
-                      </section>
-                      <section>
-                        <h3>Tienda</h3>
-                        {cardRow(game.shop, "shop")}
-                      </section>
-                    </div>
-                  ) : tab === "inventory" ? (
-                    <section className="collection">
-                      <h3>Objetos de {player.character.name}</h3>
-                      {cardRow(player.items, "items")}
-                    </section>
-                  ) : null}
-                </div>
+              <section className="table board">
+                <section>
+                  <h3>Monstruos</h3>
+                  {cardRow(game.monsters, "monsters")}
+                </section>
+                <section>
+                  <h3>Tienda</h3>
+                  {cardRow(game.shop, "shop")}
+                </section>
               </section>
               <aside className="actions" data-card-drop="">
                 <div className="turn">
                   <small>RONDA {game.round} · TURNO</small>
                   <strong>{game.players[game.turn].character.name}</strong>
                 </div>
-                <div className="die">
-                  <Dices />
-                  <b key={game.die}>{game.die}</b>
-                  <span>{fighting ? fighting.name : "Último dado"}</span>
-                </div>
+                {game.die > 0 && (
+                  <div className="die">
+                    <Dices />
+                    <b key={game.die}>{game.die}</b>
+                    <span>{fighting ? fighting.name : "Último dado"}</span>
+                  </div>
+                )}
                 <div
                   className="priority"
                   key={(top?.uid ?? "") + (game.prompt?.id ?? "")}
                 >
+                  {shownPlay && (
+                    <>
+                      <small className="play-caption">
+                        {top
+                          ? "En la pila · " + ownerName(top.owner)
+                          : "Última jugada · " +
+                            ownerName(lastPlay?.owner ?? 0)}
+                      </small>
+                      <img
+                        className={"play-card" + (top ? "" : " past")}
+                        src={image(shownPlay)}
+                        alt={shownPlay.name}
+                        onClick={() => showCard(shownPlay, "stack")}
+                      />
+                    </>
+                  )}
                   <strong>
                     {game.prompt
                       ? "Elige para continuar"
                       : top
-                        ? top.name
+                        ? liveCard
+                          ? game.stack.length > 1
+                            ? `${game.stack.length} efectos en la pila`
+                            : "Esperando respuestas"
+                          : top.name
                         : fighting
                           ? "En combate"
                           : "Tu próxima acción"}
@@ -340,6 +364,15 @@ export default function Home() {
                   </small>
                 </div>
                 <div className="action-buttons">
+                  {promptHidden && (
+                    <button
+                      className="primary resume-decision"
+                      onClick={() => setHiddenPrompt(null)}
+                    >
+                      Volver a decidir
+                      <small>{myPrompt?.title}</small>
+                    </button>
+                  )}
                   {!game.prompt &&
                     (game.stack.length > 0 ? (
                       <button
@@ -369,23 +402,23 @@ export default function Home() {
                     ) : (
                       <>
                         <button
-                          disabled={
-                            busy ||
-                            !canMain ||
-                            (game.attacks <= 0 &&
-                              !game.flags.optionalDeck &&
-                              !player.items.some(
-                                (c) =>
-                                  c.name === "Bum-Bo!" &&
-                                  (c.counters || 0) >= 25,
-                              ))
+                          disabled={busy || !canAttack}
+                          title={
+                            canMain && !canAttack
+                              ? "Ya has usado tus ataques este turno"
+                              : undefined
                           }
                           onClick={() => action({ type: "attack" })}
                         >
                           Atacar
                         </button>
                         <button
-                          disabled={busy || !canMain}
+                          disabled={busy || !canBuy}
+                          title={
+                            canMain && !canBuy
+                              ? "Ya has usado tu compra este turno"
+                              : undefined
+                          }
                           onClick={() => action({ type: "buy" })}
                         >
                           Comprar
@@ -411,25 +444,43 @@ export default function Home() {
                 </div>
               </aside>
               <section className="hand">
-                <div className="hand-status">
-                  <span className={player.tapped ? "chip off" : "chip"}>
-                    {player.tapped ? "Personaje agotado" : "Personaje listo"}
-                  </span>
-                  <span className="chip">
-                    Jugadas{" "}
-                    {(activeSeat === game.turn ? game.lootPlays : 0) +
-                      game.bonusPlays[activeSeat]}
-                  </span>
+                <div
+                  className="hand-group items"
+                  style={{ flexGrow: Math.max(1, player.items.length) }}
+                >
+                  <small className="group-label">Objetos</small>
+                  <Cards
+                    key="items"
+                    cards={player.items}
+                    game={game}
+                    onSelect={(c) => showCard(c, "items")}
+                    playable={canUseItem}
+                  />
                 </div>
-                <Cards
-                  key="hand"
-                  cards={player.hand}
-                  game={game}
-                  onSelect={(c) => showCard(c, "hand")}
-                  playable={canPlayFromHand}
-                  fresh={fresh}
-                  onDrop={busy ? undefined : playFromHand}
-                />
+                <div
+                  className="hand-group"
+                  style={{ flexGrow: Math.max(2, player.hand.length) }}
+                >
+                  <div className="hand-status">
+                    <span className={player.tapped ? "chip off" : "chip"}>
+                      {player.tapped ? "Personaje agotado" : "Personaje listo"}
+                    </span>
+                    <span className="chip">
+                      Jugadas{" "}
+                      {(activeSeat === game.turn ? game.lootPlays : 0) +
+                        game.bonusPlays[activeSeat]}
+                    </span>
+                  </div>
+                  <Cards
+                    key="hand"
+                    cards={player.hand}
+                    game={game}
+                    onSelect={(c) => showCard(c, "hand")}
+                    playable={canPlayFromHand}
+                    fresh={fresh}
+                    onDrop={busy ? undefined : playFromHand}
+                  />
+                </div>
               </section>
             </section>
           )}
@@ -493,46 +544,23 @@ export default function Home() {
           player,
           activeSeat,
           busy,
-          canMain,
+          canAttack,
+          canBuy,
           availableNormal,
           action,
         }}
       />
-      <Dialog
-        open={
-          !!game?.prompt &&
-          !game?.winner &&
-          (game.mode === "solo" || game.prompt.player === seat)
-        }
-        onOpenChange={() => {}}
-      >
-        <DialogContent
-          className="mobile-dialog decision"
-          showCloseButton={false}
-        >
-          <DialogTitle>{game?.prompt?.title}</DialogTitle>
-          <DialogDescription>
-            {game?.prompt && game.players[game.prompt.player].name} · elige para
-            continuar
-          </DialogDescription>
-          <Pages
-            key={game?.prompt?.id}
-            items={game?.prompt?.options || []}
-            size={3}
-            render={(o) => (
-              <button
-                className="choice"
-                disabled={busy}
-                onClick={() => action({ type: "choose", choice: o.id })}
-              >
-                {o.card && <img src={image(o.card)} alt="" />}
-                <span>{o.label}</span>
-                <ArrowRight size={18} />
-              </button>
-            )}
-          />
-        </DialogContent>
-      </Dialog>
+      {game && myPrompt && (
+        <DecisionDialog
+          key={myPrompt.id}
+          prompt={myPrompt}
+          chooserName={game.players[myPrompt.player].character.name}
+          open={!promptHidden}
+          busy={busy}
+          onChoose={(o) => action({ type: "choose", choice: o.id })}
+          onMinimize={() => setHiddenPrompt(myPrompt.id)}
+        />
+      )}
       <Dialog open={!!game?.winner} onOpenChange={() => {}}>
         <DialogContent className="mobile-dialog" showCloseButton={false}>
           <DialogTitle>{game?.winner}</DialogTitle>

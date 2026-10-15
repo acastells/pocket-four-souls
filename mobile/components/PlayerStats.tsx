@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+import { Heart, Skull } from "lucide-react";
 import { soulCount, type Player } from "../../lib/game";
 const SOULS_TO_WIN = 4;
 const SILVER_VALUE = 5;
@@ -69,6 +69,16 @@ export function PlayerStats({ player }: { player: Player }) {
           <i key={i} className={"soul" + (i < souls ? " full" : "")} />
         ))}
       </span>
+      {player.curses.length > 0 && (
+        <span
+          className="stat cursed"
+          title={"Maldiciones: " + player.curses.map((c) => c.name).join(", ")}
+          aria-label={`${player.curses.length} maldiciones`}
+        >
+          <Skull />
+          {player.curses.length > 1 && player.curses.length}
+        </span>
+      )}
       {player.dead && <span className="dead">†</span>}
     </span>
   );

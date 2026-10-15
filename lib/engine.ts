@@ -637,6 +637,8 @@ export class Engine {
     s.attacks = 1 + (this.has(s.turn, "champion_belt") ? 1 : 0);
     s.flags = {};
     s.forcedUid = undefined;
+    // 0 means nobody has rolled yet this turn.
+    s.die = 0;
     s.players.forEach((x) => {
       x.flags = { skipTurn: x.flags.skipTurn || 0 };
       x.temp = {};

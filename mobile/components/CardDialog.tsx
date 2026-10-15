@@ -15,7 +15,8 @@ interface Props {
   player: Player | undefined;
   activeSeat: number;
   busy: boolean;
-  canMain: boolean;
+  canAttack: boolean;
+  canBuy: boolean;
   availableNormal: boolean;
   action: (action: Action) => void;
 }
@@ -26,7 +27,8 @@ export function CardDialog({
   player,
   activeSeat,
   busy,
-  canMain,
+  canAttack,
+  canBuy,
   availableNormal,
   action,
 }: Props) {
@@ -131,7 +133,7 @@ export function CardDialog({
               {selected.from === "monsters" && isMonster(selected.card) && (
                 <button
                   className="primary"
-                  disabled={busy || !canMain}
+                  disabled={busy || !canAttack}
                   onClick={() => action({ type: "attack" })}
                 >
                   Declarar ataque
@@ -140,7 +142,7 @@ export function CardDialog({
               {selected.from === "shop" && (
                 <button
                   className="primary"
-                  disabled={busy || !canMain}
+                  disabled={busy || !canBuy}
                   onClick={() => action({ type: "buy" })}
                 >
                   Declarar compra

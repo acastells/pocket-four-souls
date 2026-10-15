@@ -612,3 +612,41 @@ test("a player with a legal response keeps priority on rolls", () => {
   assert.equal(s.stack.at(-1).kind, "roll");
   assert.equal(s.priority, 0);
 });
+test("curses never reach the shop; a revealed curse goes to the chosen player", () => {
+  for (let i = 0; i < 30; i++) {
+    const g = newGame("online", ["A", "B", "C"]);
+    assert.ok(
+      [...g.shop, ...g.decks.treasure].every(
+        (c) => c.type === "treasure" && rule(c).subtype !== "Curse Card",
+      ),
+    );
+  }
+  let s = setup();
+  const curse = card("b2-curse_of_greed");
+  s.decks.monster = [card("b2-dip"), curse];
+  s.monsters.pop();
+  const e = new Engine(s);
+  e.fill();
+  e.settle();
+  assert.equal(s.stack.at(-1).name, curse.name);
+  s = resolveOne(s);
+  s = choose(s, "B");
+  assert.deepEqual(
+    s.players[1].curses.map((c) => c.uid),
+    [curse.uid],
+  );
+  assert.equal(s.players[0].curses.length, 0);
+  assert.ok(!s.monsters.some((c) => c.uid === curse.uid));
+  assert.ok(!s.shop.some((c) => c.uid === curse.uid));
+  assert.equal(s.monsters.length, 2);
+});
+test("The D6 can only be activated while a dice roll is on the stack", () => {
+  let s = setup();
+  const d6 = s.players[0].items[0];
+  assert.equal(cardBlock(s, 0, d6, "items", 0), "No hay un objetivo válido");
+  s = act(s, { type: "attack" }, 0);
+  s = choose(s, "Monstro");
+  s = act(s, { type: "roll" }, 0);
+  assert.equal(s.stack.at(-1).kind, "roll");
+  assert.equal(cardBlock(s, 0, s.players[0].items[0], "items", 0), null);
+});
