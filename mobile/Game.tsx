@@ -3,17 +3,27 @@ import { useState } from "react";
 import { RulesDialog } from "./components/RulesDialog";
 import { CardDialog } from "./components/CardDialog";
 import { useGameSession } from "./hooks/useGameSession";
+import { useHandDraws } from "./hooks/useHandDraws";
 import { Cards } from "./components/Cards";
 import { Pages } from "./components/Pages";
+import { PlayerStats } from "./components/PlayerStats";
+import { TablePanels, type Panel } from "./components/TablePanels";
 import { image } from "./services/images";
-import { BookOpen, ArrowRight, Heart, Coins, Gem, Dices } from "lucide-react";
+import {
+  BookOpen,
+  ArrowRight,
+  Dices,
+  Library,
+  ScrollText,
+  Layers,
+} from "lucide-react";
 import {
   Dialog,
   DialogContent,
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { Card, Action, soulCount } from "@/lib/game";
+import { Card, Action, cardBlock } from "@/lib/game";
 export default function Home() {
   const {
     game,
@@ -39,16 +49,21 @@ export default function Home() {
     dispatch,
     activeSeat,
   } = useGameSession();
+  const { fresh, notice } = useHandDraws(game, room, seat);
   const [rules, setRules] = useState(false),
     [selected, setSelected] = useState<{ card: Card; from: string } | null>(
       null,
     ),
     [inspect, setInspect] = useState<number | null>(null),
     [tab, setTab] = useState("table");
-  const [collection, setCollection] = useState("items");
+  const [panel, setPanel] = useState<Panel | null>(null);
   const player = game?.players[activeSeat];
   function action(action: Action) {
     setSelected(null);
+    if (action.type === "buy" && game && game.purchases <= 0) {
+      setError("Ya has usado tu compra de este turno.");
+      return;
+    }
     void dispatch(action);
   }
   const canMain =
@@ -73,6 +88,17 @@ export default function Home() {
   const showCard = (card: Card, from: string) => {
     if (card.id !== "hidden") setSelected({ card, from });
   };
+  const canPlayFromHand = (card: Card) =>
+    !!game &&
+    !!player &&
+    (availableNormal || !player.tapped) &&
+    !cardBlock(game, activeSeat, card, "hand");
+  // Spending the character is never implicit: without a loot play left, a
+  // dropped card opens its dialog so the player chooses explicitly.
+  const playFromHand = (card: Card) =>
+    availableNormal
+      ? action({ type: "play", uid: card.uid })
+      : showCard(card, "hand");
   const cardRow = (list: Card[], from: string) => (
     <Cards
       key={from}
@@ -85,6 +111,7 @@ export default function Home() {
     <main className="pocket">
       <header className="toolbar">
         <button onClick={() => setScreen("home")} className="wordmark">
+          <img className="logo" src="/favicon.svg" alt="" />
           FOUR SOULS <small>POCKET</small>
         </button>
         <span>
@@ -92,11 +119,38 @@ export default function Home() {
             ? game.mode === "solo"
               ? `${game.timer} rondas restantes`
               : `Sala ${room}`
-            : "BASE V2 · FAN NO OFICIAL"}
+            : ""}
         </span>
-        <button aria-label="Reglas" onClick={() => setRules(true)}>
-          <BookOpen size={18} />
-        </button>
+        <nav className="toolbar-menu" aria-label="Información de la partida">
+          {screen === "game" && game?.started && (
+            <>
+              <button
+                aria-label="Colecciones"
+                onClick={() => setPanel("collections")}
+              >
+                <Library size={16} />
+                <span>Colecciones</span>
+              </button>
+              <button aria-label="Registro" onClick={() => setPanel("log")}>
+                <ScrollText size={16} />
+                <span>Registro</span>
+              </button>
+              <button
+                className={game.stack.length ? "has-stack" : ""}
+                aria-label="Pila"
+                onClick={() => setPanel("stack")}
+              >
+                <Layers size={16} />
+                <span>Pila</span>
+                <b className="badge">{game.stack.length}</b>
+              </button>
+            </>
+          )}
+          <button aria-label="Reglas" onClick={() => setRules(true)}>
+            <BookOpen size={16} />
+            <span>Reglas</span>
+          </button>
+        </nav>
       </header>
       {screen === "home" ? (
         <section className="home">
@@ -107,7 +161,6 @@ export default function Home() {
               <br />
               te espera.
             </h1>
-            <small>Combate y efectos automáticos.</small>
           </div>
           <div className="home-controls">
             <nav>
@@ -138,7 +191,6 @@ export default function Home() {
                 {resume && game?.mode !== "solo" && (
                   <button onClick={resumeSolo}>Continuar partida</button>
                 )}
-                <small>Guardado automático.</small>
               </>
             ) : (
               <>
@@ -215,15 +267,10 @@ export default function Home() {
                     <img src={image(p.character)} alt="" />
                     <div>
                       <strong>
-                        {p.character.name}
-                        {i === activeSeat ? " · TÚ" : ""}
+                        <span className="player-name">{p.character.name}</span>
+                        {i === activeSeat && <em className="you">TÚ</em>}
                       </strong>
-                      <span>
-                        <Heart />
-                        {p.hp} <Coins />
-                        {p.coins} <Gem />
-                        {soulCount(p)}/4 {p.dead ? "†" : ""}
-                      </span>
+                      <PlayerStats player={p} />
                     </div>
                   </button>
                 ))}
@@ -233,9 +280,6 @@ export default function Home() {
                   {[
                     ["table", "Mesa"],
                     ["inventory", "Objetos"],
-                    ["other", "Colecciones"],
-                    ["history", "Registro"],
-                    ["stack", `Pila (${game.stack.length})`],
                   ].map(([id, label]) => (
                     <button
                       key={id}
@@ -250,16 +294,11 @@ export default function Home() {
                   {tab === "table" ? (
                     <div className="board">
                       <section>
-                        <h3>
-                          Monstruos{" "}
-                          <small>{game.decks.monster.length} en mazo</small>
-                        </h3>
+                        <h3>Monstruos</h3>
                         {cardRow(game.monsters, "monsters")}
                       </section>
                       <section>
-                        <h3>
-                          Tienda <small>{game.purchases} compra</small>
-                        </h3>
+                        <h3>Tienda</h3>
                         {cardRow(game.shop, "shop")}
                       </section>
                     </div>
@@ -268,72 +307,23 @@ export default function Home() {
                       <h3>Objetos de {player.character.name}</h3>
                       {cardRow(player.items, "items")}
                     </section>
-                  ) : tab === "other" ? (
-                    <section className="collection">
-                      <nav className="collection-nav">
-                        {[
-                          ["items", "Almas extra"],
-                          ["souls", "Tus almas"],
-                          ["curses", "Maldiciones"],
-                          ["loot", "Descarte botín"],
-                          ["monster", "Descarte monstruos"],
-                          ["treasure", "Descarte tesoros"],
-                        ].map(([id, label]) => (
-                          <button
-                            className={collection === id ? "active" : ""}
-                            key={id}
-                            onClick={() => setCollection(id)}
-                          >
-                            {label}
-                          </button>
-                        ))}
-                      </nav>
-                      {cardRow(
-                        collection === "items"
-                          ? game.bonus
-                          : collection === "souls"
-                            ? player.souls
-                            : collection === "curses"
-                              ? player.curses
-                              : game.discard[collection] || [],
-                        "collection-" + collection,
-                      )}
-                    </section>
-                  ) : tab === "history" ? (
-                    <Pages
-                      items={game.log}
-                      size={3}
-                      render={(l) => <p className="log-line">{l}</p>}
-                    />
-                  ) : (
-                    <Pages
-                      items={[...game.stack].reverse()}
-                      size={3}
-                      render={(c, i) => (
-                        <p className="log-line">
-                          <strong>
-                            {i === 0 ? "Siguiente · " : ""}
-                            {c.name}
-                          </strong>
-                          {c.kind === "roll" ? ` · dado ${c.value}` : ""}
-                        </p>
-                      )}
-                      empty="La pila está vacía."
-                    />
-                  )}
+                  ) : null}
                 </div>
               </section>
-              <aside className="actions">
+              <aside className="actions" data-card-drop="">
                 <div className="turn">
                   <small>RONDA {game.round} · TURNO</small>
                   <strong>{game.players[game.turn].character.name}</strong>
                 </div>
                 <div className="die">
                   <Dices />
-                  <b>{game.die}</b>
+                  <b key={game.die}>{game.die}</b>
                   <span>{fighting ? fighting.name : "Último dado"}</span>
                 </div>
-                <div className="priority">
+                <div
+                  className="priority"
+                  key={(top?.uid ?? "") + (game.prompt?.id ?? "")}
+                >
                   <strong>
                     {game.prompt
                       ? "Elige para continuar"
@@ -395,7 +385,7 @@ export default function Home() {
                           Atacar
                         </button>
                         <button
-                          disabled={busy || !canMain || game.purchases <= 0}
+                          disabled={busy || !canMain}
                           onClick={() => action({ type: "buy" })}
                         >
                           Comprar
@@ -421,23 +411,38 @@ export default function Home() {
                 </div>
               </aside>
               <section className="hand">
-                <h3>
-                  Mano · {player.character.name}{" "}
-                  <small>
-                    {player.hand.length} cartas ·{" "}
-                    {player.tapped
-                      ? "personaje agotado"
-                      : "personaje disponible"}{" "}
-                    · {activeSeat === game.turn ? game.lootPlays : 0}+
-                    {game.bonusPlays[activeSeat]} jugadas
-                  </small>
-                </h3>
-                {cardRow(player.hand, "hand")}
+                <div className="hand-status">
+                  <span className={player.tapped ? "chip off" : "chip"}>
+                    {player.tapped ? "Personaje agotado" : "Personaje listo"}
+                  </span>
+                  <span className="chip">
+                    Jugadas{" "}
+                    {(activeSeat === game.turn ? game.lootPlays : 0) +
+                      game.bonusPlays[activeSeat]}
+                  </span>
+                </div>
+                <Cards
+                  key="hand"
+                  cards={player.hand}
+                  game={game}
+                  onSelect={(c) => showCard(c, "hand")}
+                  playable={canPlayFromHand}
+                  fresh={fresh}
+                  onDrop={busy ? undefined : playFromHand}
+                />
               </section>
             </section>
           )}
         </>
       ) : null}
+      {notice && (
+        <div className="notice" key={notice.id} role="status">
+          {notice.cards.map((c) => (
+            <img key={c.uid} src={image(c)} alt="" />
+          ))}
+          <span>{notice.text}</span>
+        </div>
+      )}
       {error && (
         <div className="toast" role="alert">
           <span>{error}</span>
@@ -471,6 +476,15 @@ export default function Home() {
         </DialogContent>
       </Dialog>
       <RulesDialog open={rules} onOpenChange={setRules} />
+      {game && player && (
+        <TablePanels
+          panel={panel}
+          onClose={() => setPanel(null)}
+          game={game}
+          player={player}
+          cardRow={cardRow}
+        />
+      )}
       <CardDialog
         {...{
           selected,

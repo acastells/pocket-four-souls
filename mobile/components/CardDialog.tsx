@@ -140,7 +140,7 @@ export function CardDialog({
               {selected.from === "shop" && (
                 <button
                   className="primary"
-                  disabled={busy || !canMain || !game?.purchases}
+                  disabled={busy || !canMain}
                   onClick={() => action({ type: "buy" })}
                 >
                   Declarar compra

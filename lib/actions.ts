@@ -120,7 +120,7 @@ export function newGame(mode: string, names: string[]): Game {
       if (key(p.character) === "eden")
         s.queue.push({ op: "custom", owner: i, key: "eden" });
     });
-    e.settle();
+    settle(s, e);
   }
   return s;
 }
@@ -147,7 +147,7 @@ export function act(input: Game, a: Action, seat: number): Game {
       if (key(p.character) === "eden")
         s.queue.push({ op: "custom", owner: i, key: "eden" });
     });
-    e.settle();
+    settle(s, e);
     return s;
   }
   if (!s.started) throw Error("Esperando al anfitrión");
@@ -158,7 +158,7 @@ export function act(input: Game, a: Action, seat: number): Game {
     if (!opt) throw Error("La opción ya no está disponible");
     s.prompt = null;
     e.enqueue(...opt.tasks);
-    e.settle();
+    settle(s, e);
     return s;
   }
   if (s.prompt) throw Error("Resuelve la decisión pendiente");
@@ -186,19 +186,7 @@ export function act(input: Game, a: Action, seat: number): Game {
       throw Error("Cada jugador debe pasar prioridad");
     if (a.type === "pass" && seat !== s.priority)
       throw Error("Espera tu prioridad");
-    s.passes = a.type === "resolve" ? s.players.length : s.passes + 1;
-    s.priority = (s.priority + 1) % s.players.length;
-    if (s.passes >= s.players.length) {
-      const top = s.stack.pop();
-      s.passes = 0;
-      s.priority = s.turn;
-      if (top) {
-        e.log("Resuelve: " + top.name);
-        const ops = clone(top.ops);
-        if (top.kind === "roll") ops.forEach((o) => (o.value = top.value));
-        e.enqueue(...ops);
-      }
-    }
+    passPriority(s, e, a.type === "resolve");
   } else if (a.type === "attack") {
     main();
     if (
@@ -425,8 +413,56 @@ export function act(input: Game, a: Action, seat: number): Game {
       args: { deck: "treasure", mode: "look" },
     });
   } else throw Error("Acción no permitida por las reglas");
-  e.settle();
+  settle(s, e);
   return s;
+}
+/** One priority pass; `all` resolves the top entry as if everyone passed. */
+function passPriority(s: Game, e: Engine, all = false) {
+  s.passes = all ? s.players.length : s.passes + 1;
+  s.priority = (s.priority + 1) % s.players.length;
+  if (s.passes >= s.players.length) {
+    const top = s.stack.pop();
+    s.passes = 0;
+    s.priority = s.turn;
+    if (top) {
+      e.log("Resuelve: " + top.name);
+      const ops = clone(top.ops);
+      if (top.kind === "roll") ops.forEach((o) => (o.value = top.value));
+      e.enqueue(...ops);
+    }
+  }
+}
+/** True when `seat` could legally play a loot card or activate an item now. */
+export function hasResponse(s: Game, seat: number): boolean {
+  const p = s.players[seat];
+  if (!p || p.dead) return false;
+  return (
+    p.hand.some((c) => c.type === "loot" && !cardBlock(s, seat, c, "hand")) ||
+    p.items.some((c) =>
+      cardAbilities(c).some((_, i) => !cardBlock(s, seat, c, "items", i)),
+    )
+  );
+}
+const AUTO_PASS_LIMIT = 200;
+/**
+ * Settles queued effects, then skips priority windows nobody can use: turn
+ * phases resolve at once, a player never waits on their own declaration (in
+ * solo, declarations resolve at once) and seats without a legal response pass.
+ */
+function settle(s: Game, e: Engine) {
+  e.settle();
+  for (let i = 0; i < AUTO_PASS_LIMIT; i++) {
+    const top = s.stack.at(-1);
+    if (!top || s.winner || s.prompt || s.queue.length) return;
+    if (top.kind === "phase") passPriority(s, e, true);
+    else if (top.kind === "declaration" && s.mode === "solo")
+      passPriority(s, e, true);
+    else if (top.kind === "declaration" && s.priority === top.owner)
+      passPriority(s, e);
+    else if (!hasResponse(s, s.priority)) passPriority(s, e);
+    else return;
+    e.settle();
+  }
 }
 export function redact(input: Game, seat: number): Game {
   const s = clone(input);

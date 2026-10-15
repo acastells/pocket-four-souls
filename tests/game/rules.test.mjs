@@ -175,8 +175,8 @@ test("attack hit creates damage; damage reduces monster HP and winning grants ex
   let s = setup();
   s.decks.monster = [card("b2-dip")];
   s.monsters[0].damage = 3;
+  // Solo declarations resolve at once: the target prompt opens immediately.
   s = act(s, { type: "attack" }, 0);
-  s = resolveOne(s);
   s = choose(s, "Monstro");
   const previous = Math.random;
   Math.random = () => 0.6;
@@ -226,7 +226,7 @@ test("a bomb can kill the monster in response to a miss and cancel combat damage
   s.decks.monster = [card("b2-dip")];
   s.monsters[0].damage = 3;
   s.players[0].hand = [card("b2-bomb-2")];
-  s = resolveOne(act(s, { type: "attack" }, 0));
+  s = act(s, { type: "attack" }, 0);
   s = choose(s, "Monstro");
   const previous = Math.random;
   Math.random = () => 0;
@@ -247,9 +247,10 @@ test("D6 and stack priority; unauthorised seats cannot act or resolve online", (
   let s = setup();
   s.mode = "online";
   s = act(s, { type: "attack" }, 0);
+  // The declarer passes automatically; seat 1 can respond, so it keeps priority.
+  assert.equal(s.priority, 1);
   reject(s, { type: "resolve" }, 0);
-  reject(s, { type: "pass" }, 1);
-  s = act(s, { type: "pass" }, 0);
+  reject(s, { type: "pass" }, 0);
   reject(s, { type: "end" }, 1);
   s = act(s, { type: "pass" }, 1);
   s = choose(s, "Monstro");
@@ -582,4 +583,32 @@ test("paid destruction costs remove two distinct items before the ability enters
   s = drain(s);
   assert.ok(s.players[0].items.some((c) => c.uid === prize.uid));
   assert.ok(!s.players[1].items.some((c) => c.uid === prize.uid));
+});
+test("turn phases resolve at once instead of waiting for priority", () => {
+  let s = setup();
+  // No items, so no end-of-turn triggers stop the flow.
+  s.players.forEach((p) => (p.items = []));
+  const before = s.players[1].hand.length;
+  s = act(s, { type: "end" }, 0);
+  assert.equal(s.turn, 1);
+  assert.ok(!s.stack.some((x) => x.kind === "phase"));
+  assert.equal(s.players[1].hand.length, before + 1);
+});
+test("seats without a legal response pass automatically online", () => {
+  let s = setup();
+  s.mode = "online";
+  s.players[1].hand = [];
+  s.players[1].items = [];
+  s.players[1].tapped = true;
+  s = act(s, { type: "attack" }, 0);
+  assert.equal(s.stack.length, 0);
+  assert.equal(s.prompt?.title, "Elige qué atacar");
+});
+test("a player with a legal response keeps priority on rolls", () => {
+  let s = setup();
+  s = act(s, { type: "attack" }, 0);
+  s = choose(s, "Monstro");
+  s = act(s, { type: "roll" }, 0);
+  assert.equal(s.stack.at(-1).kind, "roll");
+  assert.equal(s.priority, 0);
 });
