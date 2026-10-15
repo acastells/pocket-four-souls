@@ -5,10 +5,12 @@ import { CardDialog } from "./components/CardDialog";
 import { useGameSession } from "./hooks/useGameSession";
 import { useHandDraws } from "./hooks/useHandDraws";
 import { useLastPlay } from "./hooks/useLastPlay";
+import { useFullscreen } from "./hooks/useFullscreen";
 import { Cards } from "./components/Cards";
 import { PlayerStats } from "./components/PlayerStats";
 import { TablePanels, type Panel } from "./components/TablePanels";
 import { DecisionDialog } from "./components/DecisionDialog";
+import { RoomInvite } from "./components/RoomInvite";
 import { image } from "./services/images";
 import {
   BookOpen,
@@ -17,6 +19,9 @@ import {
   Library,
   ScrollText,
   Layers,
+  Maximize,
+  Minimize,
+  RotateCw,
 } from "lucide-react";
 import {
   Dialog,
@@ -59,6 +64,7 @@ export default function Home() {
   } = useGameSession();
   const { fresh, notice } = useHandDraws(game, room, seat);
   const lastPlay = useLastPlay(game);
+  const fullscreen = useFullscreen();
   const [rules, setRules] = useState(false),
     [selected, setSelected] = useState<{ card: Card; from: string } | null>(
       null,
@@ -187,6 +193,27 @@ export default function Home() {
             <BookOpen size={16} />
             <span>Reglas</span>
           </button>
+          {fullscreen.supported && (
+            <button
+              aria-label={
+                fullscreen.active
+                  ? "Salir de pantalla completa"
+                  : "Pantalla completa"
+              }
+              title={
+                fullscreen.active
+                  ? "Salir de pantalla completa"
+                  : "Pantalla completa"
+              }
+              onClick={() => void fullscreen.toggle()}
+            >
+              {fullscreen.active ? (
+                <Minimize size={16} />
+              ) : (
+                <Maximize size={16} />
+              )}
+            </button>
+          )}
         </nav>
       </header>
       {screen === "home" ? (
@@ -271,22 +298,28 @@ export default function Home() {
         <>
           {!game.started ? (
             <section className="waiting">
-              <h1>Sala {room}</h1>
-              <p>{joined} de 4 jugadores · comparte el código</p>
-              {seat === 0 ? (
-                <button
-                  className="primary"
-                  disabled={busy || joined < 2}
-                  onClick={() => action({ type: "start" })}
-                >
-                  Empezar partida
-                </button>
-              ) : (
-                <p>Esperando al anfitrión…</p>
-              )}
-              <small>
-                Comparte la dirección del servidor y el código de sala.
-              </small>
+              <RoomInvite room={room} />
+              <div className="waiting-info">
+                <small>SALA</small>
+                <h1>{room}</h1>
+                <p>{joined} de 4 jugadores</p>
+                <div className="seats" aria-hidden="true">
+                  {[0, 1, 2, 3].map((i) => (
+                    <i key={i} className={i < joined ? "taken" : ""} />
+                  ))}
+                </div>
+                {seat === 0 ? (
+                  <button
+                    className="primary"
+                    disabled={busy || joined < 2}
+                    onClick={() => action({ type: "start" })}
+                  >
+                    {joined < 2 ? "Esperando jugadores…" : "Empezar partida"}
+                  </button>
+                ) : (
+                  <p>Esperando al anfitrión…</p>
+                )}
+              </div>
             </section>
           ) : (
             <section className="play">
@@ -583,7 +616,13 @@ export default function Home() {
         </DialogContent>
       </Dialog>
       <div className="rotate-message">
-        Gira el dispositivo para jugar en horizontal.
+        <RotateCw className="rotate-icon" size={44} />
+        <p>Gira el dispositivo para jugar en horizontal.</p>
+        {fullscreen.supported && !fullscreen.active && (
+          <button className="primary" onClick={() => void fullscreen.toggle()}>
+            <Maximize size={18} /> Pantalla completa
+          </button>
+        )}
       </div>
     </main>
   );

@@ -267,9 +267,84 @@ input {
 .waiting {
   margin: auto;
   display: flex;
+  align-items: center;
+  gap: clamp(20px, 5vw, 56px);
+  padding: 12px;
+}
+.room-invite {
+  display: flex;
   flex-direction: column;
-  gap: 18px;
+  align-items: center;
+  gap: 8px;
+  max-width: 280px;
   text-align: center;
+}
+.qr {
+  width: min(42dvh, 240px);
+  height: min(42dvh, 240px);
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 1px #cab17b,
+    0 12px 32px #000a;
+}
+.room-invite small {
+  color: #aeb99a;
+}
+.invite-warning {
+  margin: 0;
+  padding: 8px 10px;
+  border: 1px dashed #c59d6d;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #e8cfa8;
+  text-align: left;
+}
+.invite-url {
+  font-size: 11px;
+  color: #cab17b;
+}
+.invite-warning code {
+  font-size: 11px;
+  color: #f5e2b0;
+}
+.waiting-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 200px;
+}
+.waiting-info > small {
+  letter-spacing: 2px;
+  color: #aeb99a;
+}
+.waiting-info h1 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 6vw, 48px);
+  letter-spacing: 3px;
+}
+.waiting-info p {
+  margin: 0;
+  color: #d8d2bd;
+}
+.seats {
+  display: flex;
+  gap: 6px;
+}
+.seats i {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px dashed #6d7560;
+  transition:
+    background 0.3s,
+    border-color 0.3s;
+}
+.seats i.taken {
+  border: 1px solid #ecd09a;
+  background: radial-gradient(circle at 35% 30%, #f5e2b0, #cab17b 60%);
+  animation: pop 0.35s ease both;
 }
 .play {
   flex: 1;
@@ -1384,11 +1459,31 @@ button.ghost:hover {
     inset: 0;
     z-index: 100;
     background: #141711;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 18px;
     text-align: center;
     padding: 40px;
     font-size: 22px;
+  }
+  .rotate-message p {
+    margin: 0;
+    max-width: 300px;
+    font-family: Georgia, serif;
+    line-height: 1.3;
+  }
+  .rotate-message .primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 8px 20px;
+    font-size: 15px;
+  }
+  .rotate-icon {
+    color: #cab17b;
+    animation: rotate-hint 2.4s ease-in-out infinite;
   }
 }
 
@@ -1524,6 +1619,16 @@ button.ghost:hover {
   }
   100% {
     transform: rotate(45deg) scale(1);
+  }
+}
+@keyframes rotate-hint {
+  0%,
+  20% {
+    transform: rotate(0);
+  }
+  60%,
+  100% {
+    transform: rotate(90deg);
   }
 }
 @keyframes turn-glow {

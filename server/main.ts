@@ -6,6 +6,7 @@ import { RoomStore } from "./room-store";
 import { RoomService } from "./room-service";
 import { handleRoomRequest } from "./http";
 import { serveStatic } from "./static";
+import { sendNetwork } from "./network";
 if (existsSync(".env")) loadEnvFile(".env");
 const production = process.argv.includes("--production");
 const host = process.env.HOST || "127.0.0.1";
@@ -29,6 +30,10 @@ const server = createServer((req, res) => {
   const pathname = new URL(req.url || "/", "http://localhost").pathname;
   if (pathname === "/api/room") {
     void handleRoomRequest(req, res, service);
+    return;
+  }
+  if (pathname === "/api/network" && req.method === "GET") {
+    sendNetwork(res, host, port);
     return;
   }
   if (pathname.startsWith("/api/")) {

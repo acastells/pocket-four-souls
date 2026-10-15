@@ -24,7 +24,10 @@ Copia `.env.example` como `.env` y cambia `HOST=127.0.0.1` por `HOST=0.0.0.0`.
 Reinicia el servidor. Conecta los dispositivos a la misma red y abre en todos
 `http://IP_DEL_ORDENADOR:5173`. Ejemplo: `http://192.168.1.40:5173`.
 
-En cada dispositivo: Online → nombre → crear sala o introducir el código.
+El anfitrión crea la sala (Online → nombre → Crear sala) desde esa dirección y la
+pantalla de espera muestra un QR. Los demás lo escanean con el móvil: se abre la app
+con el código ya puesto, solo falta escribir el nombre y pulsar Unirme. También se
+puede copiar el enlace o introducir el código a mano.
 El anfitrión puede empezar cuando haya al menos dos jugadores. Para probarlo solo,
 usa una ventana normal y otra de incógnito: dos pestañas normales comparten identidad.
 Si aparece una solicitud del firewall, permite el acceso desde tu red privada.

@@ -76,3 +76,30 @@ test("HTTP endpoint validates method, origin, JSON, token and body size", async 
     store.close();
   }
 });
+
+test("LAN addresses: none on loopback, private IPv4 first on all interfaces", async () => {
+  const { lanUrls } = await import("../../server/network");
+  const nic = (address: string, internal = false) => ({
+    address,
+    netmask: "255.255.255.0",
+    family: "IPv4" as const,
+    mac: "00:00:00:00:00:00",
+    internal,
+    cidr: null,
+  });
+  const interfaces = {
+    lo: [nic("127.0.0.1", true)],
+    wsl: [nic("172.20.0.1")],
+    wifi: [nic("192.168.1.40")],
+    auto: [nic("169.254.3.3")],
+  };
+  assert.deepEqual(lanUrls("127.0.0.1", 5173, interfaces), []);
+  assert.deepEqual(lanUrls("0.0.0.0", 5173, interfaces), [
+    "http://192.168.1.40:5173",
+    "http://172.20.0.1:5173",
+    "http://169.254.3.3:5173",
+  ]);
+  assert.deepEqual(lanUrls("192.168.1.40", 80, interfaces), [
+    "http://192.168.1.40:80",
+  ]);
+});

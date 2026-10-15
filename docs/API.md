@@ -4,6 +4,11 @@ Todas las operaciones usan `POST /api/room`, JSON y `Authorization: Bearer TOKEN
 El navegador genera un token aleatorio de 32 bytes y lo conserva localmente. El
 servidor solo almacena su hash SHA-256. El token identifica un asiento: no es una cuenta.
 
+`GET /api/network` devuelve `{ "urls": [...] }` con las direcciones de red local por
+las que otros dispositivos pueden llegar al servidor (vacío si solo escucha en
+`127.0.0.1`). La pantalla de espera lo usa para que el QR de invitación funcione
+aunque el anfitrión haya abierto la app como `localhost`.
+
 ## Peticiones
 
 ```json
